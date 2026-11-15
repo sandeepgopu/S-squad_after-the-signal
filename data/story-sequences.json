@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "description": "Optional mission-specific narrative additions. Times must have a precision; positions and trajectories are optional and must be independently sourced. Existing story chapters supply the base sequence.",
+  "missions": {
+    "mer-b-opportunity": {
+      "capabilities": {
+        "story": true,
+        "cruiseTrajectory": true,
+        "surfaceRoute": false,
+        "narration": true
+      },
+      "objectChapterLinks": {
+        "opportunity-landing-platform": "landing",
+        "opportunity-rover": "last-signal"
+      },
+      "chapterNotes": {
+        "launch": "Launch: Space Launch Complex 17B, Cape Canaveral, Florida. After about 60 minutes in Earth parking orbit, the launch vehicle sent Opportunity toward Mars; separation followed about 83 minutes after liftoff."
+      },
+      "insertAfter": "launch",
+      "phases": [
+        {
+          "id": "b1",
+          "kind": "maneuver",
+          "title": "First course correction",
+          "dateUtc": "2003-07-18T19:30:00Z",
+          "timePrecision": "minute",
+          "dateLabel": "18 July 2003 · 19:30 UTC",
+          "scene": "solar",
+          "eyebrow": "ACROSS SPACE",
+          "story": "Opportunity fired its thrusters to remove the launch targeting bias and correct injection errors.",
+          "fact": "Time is reported to the minute in the JPL navigation report. The spacecraft position is interpolated from sampled SPICE data, not a measured burn location.",
+          "sourceUrl": "https://descanso.jpl.nasa.gov/DPSummary/DESCANSO_MER_NAV_051215C_low.pdf"
+        },
+        {
+          "id": "b2",
+          "kind": "maneuver",
+          "title": "Fine-tuning the journey",
+          "dateUtc": "2003-09-08T16:00:00Z",
+          "timePrecision": "minute",
+          "dateLabel": "8 September 2003 · 16:00 UTC",
+          "scene": "solar",
+          "eyebrow": "ACROSS SPACE",
+          "story": "A second correction adjusted errors from the first maneuver.",
+          "fact": "Time is reported to the minute in the JPL navigation report. The spacecraft position is interpolated from sampled SPICE data, not a measured burn location.",
+          "sourceUrl": "https://descanso.jpl.nasa.gov/DPSummary/DESCANSO_MER_NAV_051215C_low.pdf"
+        },
+        {
+          "id": "b4",
+          "kind": "maneuver",
+          "title": "The final correction",
+          "dateUtc": "2004-01-17T02:00:00Z",
+          "timePrecision": "minute",
+          "dateLabel": "17 January 2004 · 02:00 UTC",
+          "scene": "solar",
+          "eyebrow": "ACROSS SPACE",
+          "story": "Opportunity made its last performed cruise correction eight days before landing.",
+          "fact": "Time is reported to the minute in the JPL navigation report. The spacecraft position is interpolated from sampled SPICE data, not a measured burn location.",
+          "sourceUrl": "https://descanso.jpl.nasa.gov/DPSummary/DESCANSO_MER_NAV_051215C_low.pdf"
+        }
+      ],
+      "trajectory": {
+        "segmentId": "mer-b-opportunity",
+        "spacecraft": true,
+        "status": "Cruise line comes from the archived MER1 SPICE spacecraft SPK. It stops at the last covered sample; it does not extrapolate into entry or surface travel."
+      },
+      "route": {
+        "extrasKey": "route",
+        "buttonLabel": "NASA route map",
+        "title": "Opportunity’s journey across Mars.",
+        "captionNote": "Annotated image; not a coordinate-registered interactive rover track.",
+        "precisionNote": "Image evidence; no continuous rover route geometry is asserted."
+      },
+      "links": [
+        {
+          "label": "Ride with Opportunity ↗",
+          "href": "/ride.html"
+        },
+        {
+          "label": "Open the detailed narrated story ↗",
+          "hrefTemplate": "/story.html#{missionId}/{phaseId}"
+        }
+      ],
+      "chapterOverrides": {
+        "launch": {
+          "timePrecision": "second",
+          "story": "Imagine a small robot tucked inside a spacecraft at Cape Canaveral. Its name is Opportunity, and it has a question: did water once change the rocks on Mars? On 8 July 2003, a Delta II rocket lifts it away from Earth. The rocket will not travel all the way with it. Opportunity's spacecraft will cross space for more than six months. The solar view follows archived SPICE spacecraft positions after the first covered sample. The planets are enlarged so we can see them.",
+          "fact": "The launch time is recorded to the second. This view plots archived SPICE spacecraft positions where the cruise kernel provides them; the body symbols are enlarged for visibility."
+        },
+        "landing": {
+          "timePrecision": "day",
+          "story": "Now we are above Mars. Opportunity falls through the thin atmosphere, protected by a heat shield, parachute, and airbags. It bounces across Meridiani Planum and comes to rest inside a small crater: Eagle. When the airbags retract, its landing platform opens like a flower. Opportunity drives away, but the platform stays here. Open the detailed story to look around the crater in a rover panorama taken days after landing."
+        },
+        "water": {
+          "timePrecision": "month"
+        },
+        "endeavour": {
+          "timePrecision": "day"
+        },
+        "last-signal": {
+          "timePrecision": "day"
+        },
+        "legacy": {
+          "timePrecision": "day"
+        }
+      }
+    }
+  },
+  "solarOverviewSegment": "mer-b-opportunity"
+}

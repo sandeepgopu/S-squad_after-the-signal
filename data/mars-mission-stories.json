@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 1,
+  "scope": "Officially sourced Mars rover mission milestones and route products. UTC is used for Earth timestamps; sol is kept as a separate Mars mission-day value. A surface pin is not treated as a moving rover position.",
+  "coordinateContract": "Route GeoJSON positions are [east longitude degrees, planetocentric latitude degrees, elevation metres] in Mars body-fixed coordinates only where the NASA product metadata establishes this. MER traverse CSVs contain corrected local map X/Y, not geographic coordinates; do not plot them as lat/lon without a validated map projection.",
+  "missions": [
+    {
+      "id": "mars-pathfinder",
+      "name": "Mars Pathfinder / Sojourner",
+      "startUtc": "1996-12-04T06:58:07Z",
+      "endLabel": "27 Sep 1997 · mission ended",
+      "sourceUrl": "https://science.nasa.gov/mission/mars-pathfinder/",
+      "route": {
+        "status": "no machine-readable time-indexed route located in this source pass",
+        "publishedMapUrl": "https://science.nasa.gov/mission/mars-pathfinder/"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Pathfinder leaves Earth",
+          "dateUtc": "1996-12-04T06:58:07Z",
+          "timePrecision": "second",
+          "scene": "flight",
+          "narration": "Mars Pathfinder carried the Sojourner rover toward Mars.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-068A"
+        },
+        {
+          "id": "landing",
+          "title": "Sojourner reaches Ares Vallis",
+          "dateUtc": "1997-07-04T16:56:55Z",
+          "timePrecision": "second",
+          "scene": "surface",
+          "narration": "Sojourner rolls into Ares Vallis, a valley shaped by enormous ancient floods. Imagine a robot no taller than a child’s knee meeting rocks that may have traveled far in rushing water. Its little instruments touch the rocks and ask: what are you made of? The lander stays behind as the rover explores.",
+          "location": {
+            "lat": 19.07,
+            "lonEast": 326.48,
+            "frame": "Mars planetocentric, east-positive 0–360; published radiometric site rounded to 0.01 degree",
+            "type": "lander site"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/mars-pathfinder/",
+          "image": {
+            "path": "https://science.nasa.gov/wp-content/uploads/2017/12/pia00621-pathfinder-and-sojourner-with-airbags-deflated.jpg?w=1536",
+            "credit": "NASA/JPL-Caltech · PIA00621",
+            "caption": "Pathfinder and Sojourner on Mars after the landing airbags deflated; landing-system context image, not a rover route map.",
+            "sourceUrl": "https://science.nasa.gov/mission/mars-pathfinder/"
+          }
+        },
+        {
+          "id": "end",
+          "title": "Last contact",
+          "dateUtc": "1997-09-27",
+          "timePrecision": "day",
+          "scene": "surface",
+          "narration": "The last signal arrives, but the little rover and lander remain together in Ares Vallis. They sent back thousands of pictures and measurements of rocks and weather. Their great discovery was also a practical one: a small moving scientist could survive and work on Mars.",
+          "sourceUrl": "https://science.nasa.gov/mission/mars-pathfinder/"
+        }
+      ]
+    },
+    {
+      "id": "mer-a-spirit",
+      "name": "Spirit",
+      "startUtc": "2003-06-10T17:58:47Z",
+      "endLabel": "25 May 2011 · mission ended",
+      "sourceUrl": "https://science.nasa.gov/mission/mer-spirit/",
+      "route": {
+        "status": "Derived corrected traverse by sol in PDS Geosciences Analyst's Notebook; native corrected X/Y map coordinates, not lat/lon; stored on Windows D only",
+        "path": "/data/routes/spirit.csv",
+        "sourceUrl": "https://an.rsl.wustl.edu/mera/AN/pages/mer/mer_traverse.htm",
+        "coordinateSystem": "local map easting/northing metres; corrected between image-matched control points by linear interpolation"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Spirit launches",
+          "dateUtc": "2003-06-10T17:58:47Z",
+          "timePrecision": "second",
+          "scene": "flight",
+          "narration": "Spirit launched as one of NASA's twin Mars Exploration Rovers.",
+          "sourceUrl": "https://science.nasa.gov/mission/mer-spirit/"
+        },
+        {
+          "id": "landing",
+          "title": "Spirit lands in Gusev Crater",
+          "dateUtc": "2004-01-04T04:35:00Z",
+          "timePrecision": "minute",
+          "sol": 1,
+          "scene": "surface",
+          "narration": "Spirit lands inside Gusev Crater, where scientists hoped to find signs of an old lake. The first view is a wide, dusty plain. Where is the evidence? Spirit must drive toward the Columbia Hills and read the rocks like pages in a very old book.",
+          "location": {
+            "lat": -14.5692,
+            "lonEast": 175.4729,
+            "frame": "Mars planetocentric, east-positive 0–360",
+            "type": "published landing coordinate"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/mer-spirit/"
+        },
+        {
+          "id": "last-contact",
+          "title": "Last communication",
+          "dateUtc": "2010-03-22",
+          "timePrecision": "day",
+          "sol": 2210,
+          "scene": "surface",
+          "narration": "Spirit's last communication reached Earth. NASA later ended the mission after recovery efforts; the rover's final area is in the Columbia Hills, without a verified point here.",
+          "sourceUrl": "https://science.nasa.gov/mission/mer-spirit/"
+        },
+        {
+          "id": "mission-end",
+          "title": "Mission ends",
+          "dateUtc": "2011-05-25",
+          "timePrecision": "day",
+          "scene": "surface",
+          "narration": "Spirit cannot call home again. Its wheels and instruments rest in the soil it studied for years. The rover was built for 90 Martian days, yet its pictures and rock measurements helped show that water had changed this part of Mars.",
+          "sourceUrl": "https://science.nasa.gov/mission/mer-spirit/"
+        },
+        {
+          "id": "columbia-hills",
+          "title": "Spirit crosses to the Columbia Hills",
+          "dateUtc": "2007-11-26",
+          "timePrecision": "day",
+          "sol": 1386,
+          "scene": "surface",
+          "narration": "Spirit climbs into the Columbia Hills and keeps investigating. One dragging wheel accidentally scrapes away soil, uncovering a patch rich in silica, the stuff used to make glass. On Earth, hot springs or steam vents can leave such deposits. A stuck wheel helped reveal a clue that ancient Mars was wetter.",
+          "image": {
+            "path": "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/photojournal/pia/pia10/pia10126/PIA10126.jpg?w=1536",
+            "credit": "NASA/JPL-Caltech/University of Arizona · PIA10126",
+            "caption": "NASA orbital-map illustration of Spirit’s route through Sol 1386.",
+            "sourceUrl": "https://science.nasa.gov/photojournal/spirits-traverse-sols-1-to-1386/"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/mer-spirit/"
+        }
+      ]
+    },
+    {
+      "id": "mer-b-opportunity",
+      "name": "Opportunity",
+      "startUtc": "2003-07-08T03:18:15Z",
+      "endLabel": "13 Feb 2019 · mission ended",
+      "sourceUrl": "https://science.nasa.gov/mission/mer-opportunity/",
+      "route": {
+        "status": "PDS Geosciences derived traverse CSV by start/end sol. Corrected local X/Y positions were interpolated between orbital-image matched points; product explicitly says it is not a PDS archive product.",
+        "path": "/data/routes/opportunity.csv",
+        "labelPath": "/data/routes/opportunity.lbl",
+        "sourceUrl": "https://an.rsl.wustl.edu/mera/AN/pages/mer/mer_traverse.htm",
+        "coordinateSystem": "local map easting/northing metres; not geographic lat/lon"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Opportunity launches",
+          "dateUtc": "2003-07-08T03:18:15Z",
+          "timePrecision": "second",
+          "scene": "flight",
+          "narration": "Imagine a small robot tucked inside a spacecraft at Cape Canaveral. Its name is Opportunity, and it has a question: did water once change the rocks on Mars? On 8 July 2003, a Delta II rocket lifts it away from Earth. The rocket will not travel all the way with it. Opportunity's spacecraft will cross space for more than six months. Follow its recorded journey through space as Earth and Mars move around the Sun.",
+          "sourceUrl": "https://descanso.jpl.nasa.gov/DPSummary/DESCANSO_MER_NAV_051215C_low.pdf",
+          "image": {
+            "path": "/assets/opportunity-launch.jpg",
+            "credit": "NASA / JPL-Caltech",
+            "caption": "Opportunity launches on a Delta II rocket from Cape Canaveral, 8 July 2003.",
+            "sourceUrl": "https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/"
+          }
+        },
+        {
+          "id": "b1",
+          "title": "First course correction",
+          "dateUtc": "2003-07-18T19:30:00Z",
+          "timePrecision": "minute",
+          "dateLabel": "18 July 2003 · 19:30 UTC",
+          "scene": "flight",
+          "narration": "Opportunity fired its thrusters to remove the launch targeting bias and correct injection errors. The burn time comes from the JPL navigation report.",
+          "sourceUrl": "https://descanso.jpl.nasa.gov/DPSummary/DESCANSO_MER_NAV_051215C_low.pdf"
+        },
+        {
+          "id": "b2",
+          "title": "Fine-tuning the journey",
+          "dateUtc": "2003-09-08T16:00:00Z",
+          "timePrecision": "minute",
+          "dateLabel": "8 September 2003 · 16:00 UTC",
+          "scene": "flight",
+          "narration": "A second correction adjusted errors from the first maneuver. The burn time comes from the JPL navigation report.",
+          "sourceUrl": "https://descanso.jpl.nasa.gov/DPSummary/DESCANSO_MER_NAV_051215C_low.pdf"
+        },
+        {
+          "id": "b4",
+          "title": "The final correction",
+          "dateUtc": "2004-01-17T02:00:00Z",
+          "timePrecision": "minute",
+          "dateLabel": "17 January 2004 · 02:00 UTC",
+          "scene": "flight",
+          "narration": "Opportunity made its last performed cruise correction eight days before landing. The burn time comes from the JPL navigation report.",
+          "sourceUrl": "https://descanso.jpl.nasa.gov/DPSummary/DESCANSO_MER_NAV_051215C_low.pdf"
+        },
+        {
+          "id": "landing",
+          "title": "Landing in Eagle Crater",
+          "dateUtc": "2004-01-25",
+          "timePrecision": "day",
+          "sol": 1,
+          "scene": "surface",
+          "narration": "Now we are above Mars. Opportunity falls through the thin atmosphere, protected by a heat shield, parachute, and airbags. It bounces across Meridiani Planum and comes to rest inside a small crater: Eagle. When the airbags retract, its landing platform opens like a flower. Opportunity drives away, but the platform stays here. Look around Eagle Crater in the rover panorama, taken days after landing.",
+          "location": {
+            "lat": -1.9483,
+            "lonEast": 354.47417,
+            "frame": "Mars planetocentric, east-positive 0–360",
+            "type": "published landing coordinate"
+          },
+          "image": {
+            "path": "/assets/eagle-pan.jpg",
+            "credit": "NASA/JPL-Caltech/Cornell · PIA05199",
+            "caption": "First 360-degree rover panorama, published 2 February 2004; camera view, not route geometry.",
+            "sourceUrl": "https://science.nasa.gov/resource/as-far-as-opportunitys-eye-can-see/"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/mer-opportunity/"
+        },
+        {
+          "id": "water",
+          "title": "The rocks tell a water story",
+          "dateUtc": "2004-03-02",
+          "timePrecision": "day",
+          "sol": 38,
+          "scene": "surface",
+          "narration": "Look closely at the little round grains in Opportunity’s photographs. The team nicknamed them “blueberries,” but they are made of the iron mineral hematite. The layered rock and minerals tell a bigger story: water once soaked this ground. Opportunity has found its first answer almost immediately after landing.",
+          "image": {
+            "path": "/assets/water.jpg",
+            "credit": "NASA / JPL-Caltech / Cornell · PIA05634",
+            "caption": "Berry Bowl close-up, acquired later in March; the discovery was announced on 2 March.",
+            "sourceUrl": "https://science.nasa.gov/resource/discovery-served-up-in-a-bowl/"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/"
+        },
+        {
+          "id": "endeavour",
+          "title": "Reaches Endeavour Crater",
+          "dateUtc": "2011-08-09",
+          "timePrecision": "day",
+          "sol": 2681,
+          "scene": "surface",
+          "narration": "Opportunity reaches the rim of giant Endeavour Crater after years of driving. Here, different rocks hold a new clue: clay minerals formed in water that was less acidic than the water near its landing site. Our rover is now comparing chapters in Mars’s long water story. Follow the track as it grows.",
+          "image": {
+            "path": "/assets/endeavour-full.jpg",
+            "credit": "NASA/JPL-Caltech/Cornell/ASU · PIA14509",
+            "caption": "Directional rover-camera mosaic from Spirit Point, not a 360-degree panorama.",
+            "sourceUrl": "https://science.nasa.gov/photojournal/arrival-at-spirit-point-by-mars-rover-opportunity/"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/",
+          "mediaMode": "ride"
+        },
+        {
+          "id": "last-contact",
+          "title": "Last message from Perseverance Valley",
+          "dateUtc": "2018-06-10",
+          "timePrecision": "day",
+          "sol": 5111,
+          "scene": "surface",
+          "narration": "Our map follows Opportunity to Perseverance Valley, on Endeavour's western rim. Here the rover photographs a full circle around itself. Then, in June 2018, a dust storm spreads across Mars. Sunlight fades, and Opportunity's solar panels cannot make enough power. Its last signal reaches Earth on 10 June. Look around its final panorama. The empty parts of some frames are real: the rover never finished sending every colour image.",
+          "image": {
+            "path": "/assets/final-pan.jpg",
+            "credit": "NASA/JPL-Caltech/Cornell/ASU · PIA22909",
+            "caption": "Final 360-degree panorama, assembled from images taken 13 May–10 June 2018.",
+            "sourceUrl": "https://science.nasa.gov/photojournal/opportunity-legacy-pan-true-color/"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/mer-opportunity/"
+        },
+        {
+          "id": "legacy",
+          "title": "A mission ends; its story remains",
+          "dateUtc": "2019-02-13",
+          "timePrecision": "day",
+          "sol": 5111,
+          "scene": "surface",
+          "narration": "A dust storm darkens the sky. Opportunity’s solar panels cannot gather enough sunlight, and no answer comes when Earth calls. The small robot rests in Perseverance Valley, but its 14-year journey taught us that Mars once held different kinds of watery places. Its photographs and measurements are still helping scientists ask new questions.",
+          "image": {
+            "path": "/assets/final-pan.jpg",
+            "credit": "NASA / JPL-Caltech / Cornell / ASU · PIA22909",
+            "caption": "Opportunity’s last panorama, assembled from photographs taken 13 May–10 June 2018.",
+            "sourceUrl": "https://science.nasa.gov/photojournal/opportunity-legacy-pan-true-color/"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+        }
+      ]
+    },
+    {
+      "id": "msl-curiosity",
+      "name": "Curiosity",
+      "startUtc": "2011-11-26T15:02:00Z",
+      "endLabel": "Still exploring Mars · latest update 7 Nov 2026",
+      "sourceUrl": "https://science.nasa.gov/mission/msl-curiosity/",
+      "route": {
+        "status": "NASA GeoJSON route exists, but its features have no sol or date fields; the player does not animate it by time.",
+        "path": "/data/routes/msl.json",
+        "sourceUrl": "https://mars.nasa.gov/mmgis-maps/MSL/Layers/json/MSL_traverse.json",
+        "coordinateSystem": "Mars body-fixed [east longitude, planetocentric latitude, elevation metres]; NASA GeoJSON product",
+        "kind": "geojson-overview"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Curiosity launches",
+          "dateUtc": "2011-11-26T15:02:00Z",
+          "timePrecision": "minute",
+          "scene": "flight",
+          "narration": "The Mars Science Laboratory mission launched with Curiosity aboard.",
+          "sourceUrl": "https://science.nasa.gov/mission/msl-curiosity/"
+        },
+        {
+          "id": "landing",
+          "title": "Wheels down in Gale Crater",
+          "dateUtc": "2012-08-06T05:17:57Z",
+          "timePrecision": "second",
+          "sol": 0,
+          "scene": "surface",
+          "narration": "Curiosity touches down in Gale Crater, with Mount Sharp rising ahead. Its rocket-powered sky crane lowers the rover on cables, then flies away to crash safely apart. The rover’s job is to climb through layers of rock and ask whether this place once had the water and ingredients that living things need.",
+          "location": {
+            "lat": -4.5895,
+            "lonEast": 137.4417,
+            "frame": "Mars planetocentric, east-positive 0–360",
+            "type": "published landing coordinate"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/msl-curiosity/"
+        },
+        {
+          "id": "latest-checkpoint",
+          "title": "Curiosity is still exploring",
+          "dateUtc": "2026-11-07T14:07:35Z",
+          "timePrecision": "second",
+          "sol": 5067,
+          "scene": "surface",
+          "narration": "Today Curiosity is still exploring. Follow its real mapped route across Gale Crater. This route is a complete overview rather than a timed replay: the published line does not tell us the date of every turn. Its rocks and images keep adding pages to the story of water on Mars.",
+          "sourceUrl": "https://science.nasa.gov/mission/msl-curiosity/science-highlights/"
+        },
+        {
+          "id": "elevation-milestone",
+          "title": "One kilometre above Gale Crater floor",
+          "dateUtc": "2026-08-26",
+          "timePrecision": "day",
+          "sol": 4996,
+          "scene": "surface",
+          "narration": "Curiosity keeps climbing Mount Sharp. Each rock layer is like a page in a book about ancient Mars. Its cameras and drill found evidence of old streams, organic molecules, and changing environments. Organic molecules are ingredients that life can use; finding them does not mean that Curiosity found life.",
+          "image": {
+            "path": "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/photojournal/pia/pia26/pia26781/PIA26781.png?w=1536&h=556&fit=clip",
+            "credit": "NASA/JPL-Caltech/MSSS · PIA26781",
+            "caption": "Curiosity panorama looking back toward Gale Crater, taken Sept. 5, 2026 (Sol 5006); rover-camera view, not route geometry.",
+            "sourceUrl": "https://science.nasa.gov/photojournal/nasas-curiosity-looks-back-after-reaching-elevation-milestone/"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/msl-curiosity/science-highlights/"
+        }
+      ]
+    },
+    {
+      "id": "mars-2020-perseverance",
+      "name": "Perseverance and Ingenuity",
+      "startUtc": "2020-07-30T11:50:00Z",
+      "endLabel": "Still exploring Mars",
+      "sourceUrl": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+      "route": {
+        "status": "NASA GeoJSON has per-sol drive features through Sol 2022 only; later dated NASA map is available as an animation/raster, not this GeoJSON",
+        "path": "/data/routes/perseverance-sol-checkpoints.json",
+        "sourceUrl": "https://mars.nasa.gov/mmgis-maps/M20/Layers/json/M20_traverse.json",
+        "coordinateSystem": "Mars body-fixed [east longitude, planetocentric latitude, elevation metres]; feature sol property; sampled drive paths",
+        "kind": "geojson-points"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Perseverance launches",
+          "dateUtc": "2020-07-30T11:50:00Z",
+          "timePrecision": "minute",
+          "scene": "flight",
+          "narration": "A rocket rises from Florida with two explorers tucked inside: the Perseverance rover and the tiny Ingenuity helicopter. They are going to Jezero Crater, where an old river once fed a lake. Perseverance will study rocks and store samples; Ingenuity will test whether a helicopter can fly in Mars’s thin air.",
+          "sourceUrl": "https://science.nasa.gov/resource/powerful-launch-for-mars-2020-perseverance/",
+          "image": {
+            "path": "/assets/perseverance-launch.jpg",
+            "credit": "United Launch Alliance / NASA",
+            "caption": "Atlas V lifts off with Perseverance and Ingenuity on 30 July 2020.",
+            "sourceUrl": "https://science.nasa.gov/resource/powerful-launch-for-mars-2020-perseverance/"
+          }
+        },
+        {
+          "id": "landing",
+          "title": "Landing in Jezero Crater",
+          "dateUtc": "2021-02-18T20:55:00Z",
+          "timePrecision": "minute",
+          "sol": 0,
+          "scene": "surface",
+          "narration": "Perseverance arrives above Jezero Crater, where an ancient river once spread into a lake. A rocket-powered sky crane lowers the rover on cables, cuts them, and flies away. Its wreckage, the heat shield, and the parachute remain nearby. The little Ingenuity helicopter is still tucked beneath the rover, ready for its own adventure.",
+          "location": {
+            "lat": 18.4446,
+            "lonEast": 77.4509,
+            "frame": "Mars planetocentric, east-positive 0–360",
+            "type": "published landing coordinate, rounded"
+          },
+          "sourceUrl": "https://science.nasa.gov/planetary-science/programs/mars-exploration/mission-timeline/how-we-land-on-mars/",
+          "image": {
+            "path": "/assets/perseverance-edl-annotated.jpg",
+            "credit": "NASA/JPL-Caltech/University of Arizona · PIA24333",
+            "caption": "Annotated HiRISE view labels Perseverance, the sky-crane descent stage crash debris, heat shield, and parachute with backshell. Each inset spans about 200 meters.",
+            "sourceUrl": "https://science.nasa.gov/image-article/apod-2021-february-27-perseverance-landing-site-from-mars-reconnaissance-orbiter/"
+          }
+        },
+        {
+          "id": "ingenuity-end",
+          "title": "Ingenuity's final flight",
+          "dateUtc": "2024-01-18",
+          "timePrecision": "day",
+          "sol": 1042,
+          "scene": "surface",
+          "narration": "Ingenuity was meant to try only a few short flights. Instead it flew 72 times, scouting Mars from the air. Its final landing damaged a rotor blade. The helicopter now rests in the area called Valinor Hills; Perseverance later photographed it from a distance. It showed that powered flight can work in Mars’s thin air.",
+          "image": {
+            "path": "/assets/ingenuity-valinor-hills.jpg",
+            "credit": "NASA/JPL-Caltech/ASU/MSSS · PIA26237",
+            "caption": "Perseverance’s Mastcam-Z mosaic shows tiny Ingenuity at Valinor Hills on Feb. 21, 2024, about a month after its 72nd and final flight.",
+            "sourceUrl": "https://www.jpl.nasa.gov/images/pia26237-ingenuity-at-valinor-hills/"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+        },
+        {
+          "id": "latest-route-checkpoint",
+          "title": "Perseverance rover path checkpoint",
+          "dateUtc": "2026-10-11",
+          "timePrecision": "day",
+          "scene": "surface",
+          "narration": "NASA's October 2026 route update records Perseverance at 45.22 kilometres driven. The rover remains active, so this is a dated checkpoint rather than a final position.",
+          "sourceUrl": "https://science.nasa.gov/resource/perseverance-rover-path-animation-october-2026-update/"
+        },
+        {
+          "id": "ingenuity-final-airfield-image",
+          "title": "Perseverance sees Ingenuity at its final airfield",
+          "dateUtc": "2024-02-04",
+          "timePrecision": "day",
+          "sol": 1058,
+          "scene": "surface",
+          "narration": "Can you spot the tiny helicopter in Perseverance’s photograph? Ingenuity sits where its flying story ended. It is one of the human-made things now resting on Mars, and its flights helped engineers learn how future aerial explorers might scout difficult ground for rovers.",
+          "image": {
+            "path": "/assets/ingenuity-valinor-hills.jpg",
+            "credit": "NASA/JPL-Caltech/ASU/MSSS · PIA26237",
+            "caption": "Perseverance’s Mastcam-Z mosaic shows tiny Ingenuity at Valinor Hills on Feb. 21, 2024, about a month after its 72nd and final flight.",
+            "sourceUrl": "https://www.jpl.nasa.gov/images/pia26237-ingenuity-at-valinor-hills/"
+          },
+          "sourceUrl": "https://www.jpl.nasa.gov/images/pia26237-ingenuity-at-valinor-hills/"
+        },
+        {
+          "id": "marathon-milestone",
+          "title": "Perseverance passes the marathon mark",
+          "dateUtc": "2026-06-13",
+          "timePrecision": "day",
+          "sol": 1890,
+          "scene": "surface",
+          "narration": "From orbit, a camera sees Perseverance and its tracks. On the ground, the rover has examined rocks from Jezero’s old lake and river delta and sealed samples in tubes. Some rocks contain intriguing chemical clues, but scientists have not proved that life once lived here. The rover keeps searching.",
+          "image": {
+            "path": "https://assets.science.nasa.gov/dynamicimage/assets/science/psd/photojournal/pia/pia26/pia26726/PIA26726.jpg?w=1536&h=1024&fit=clip",
+            "credit": "NASA/JPL-Caltech/University of Arizona · PIA26726",
+            "caption": "Perseverance and tracks in HiRISE image acquired June 13, 2026 (Sol 1890).",
+            "sourceUrl": "https://science.nasa.gov/photojournal/nasas-hirise-captures-perseverance-marking-a-milestone-on-mars/"
+          },
+          "sourceUrl": "https://science.nasa.gov/mission/mars-2020-perseverance/science-highlights/"
+        }
+      ]
+    },
+    {
+      "id": "tianwen-1-zhurong",
+      "name": "Zhurong",
+      "startUtc": "2020-07-23T04:41:00Z",
+      "endLabel": "Dormant since 2022",
+      "sourceUrl": "https://www.cnsa.gov.cn/english/n6465719/c6809882/content.html",
+      "route": {
+        "status": "no authoritative machine-readable time-indexed route dataset located in this source pass; published figures/images are not coordinate-registered route polylines",
+        "coordinateSystem": "not available"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Tianwen-1 launches",
+          "dateUtc": "2020-07-23T04:41:00Z",
+          "timePrecision": "minute",
+          "scene": "flight",
+          "narration": "China's Tianwen-1 mission carried the Zhurong rover to Mars.",
+          "sourceUrl": "https://www.cnsa.gov.cn/english/n6465719/c6809882/content.html"
+        },
+        {
+          "id": "landing",
+          "title": "Zhurong lands in Utopia Planitia",
+          "dateUtc": "2021-05-14",
+          "timePrecision": "day",
+          "scene": "surface",
+          "narration": "Zhurong landed in southern Utopia Planitia on May 15 China Standard Time (May 14 UTC). The published landing area is not an exact final rover coordinate.",
+          "location": {
+            "lat": 25.066,
+            "lonEast": 109.925,
+            "frame": "Mars planetocentric; location estimate from orbital imagery, not a rover telemetry coordinate",
+            "type": "approximate landing site"
+          },
+          "sourceUrl": "https://www.cnsa.gov.cn/english/n6465652/n6465653/c6812112/content.html",
+          "image": {
+            "path": "/assets/zhurong-selfie.jpg",
+            "credit": "CNSA via The Planetary Society",
+            "caption": "Zhurong and its landing platform photographed together on Mars in June 2021; this image was taken after landing, not at touchdown.",
+            "sourceUrl": "https://www.planetary.org/space-images/chinas-zhurong-rover-on-mars"
+          }
+        },
+        {
+          "id": "hibernation",
+          "title": "Communications pause during hibernation",
+          "dateUtc": "2022-05-18",
+          "timePrecision": "day",
+          "scene": "surface",
+          "narration": "The Chinese Academy of Sciences reported that Zhurong entered dormancy on May 18, 2022. This is the last confirmed operational checkpoint in this record, not a precise last radio contact or an exact final position.",
+          "sourceUrl": "https://english.cas.cn/newsroom/news--archives/2022/cas-in-media/202205/t20220523_1125122.shtml"
+        }
+      ]
+    }
+  ]
+}

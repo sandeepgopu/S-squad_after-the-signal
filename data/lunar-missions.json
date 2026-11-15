@@ -1,0 +1,1007 @@
+{
+  "schemaVersion": 1,
+  "coordinateSystem": "Lunar planetocentric coordinates; east-positive longitude. Apollo published coordinates are modern LRO/NSSDC values where stated; Chandrayaan coordinates retain the precision ISRO published.",
+  "note": "UTC values are normalized from NASA NSSDCA's UT mission summaries or ISRO's IST reports. Precision is explicitly labelled. A surface route is included only when an official published map or source reports it; no per-turn position or camera orientation is inferred. Apollo 7 and Apollo 9 are Earth-orbit qualification missions, so they are excluded from this catalog of crewed lunar missions; neither visited the Moon.",
+  "sourceRegistry": {
+    "apollo-coordinates": "https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html",
+    "apollo-lro": "https://science.nasa.gov/mission/lro/about/",
+    "apollo11-lro-image": "https://science.nasa.gov/resource/apollo-11-landing-site/",
+    "apollo-traverse": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/TraverseMapsEarth.html",
+    "apollo-hardware": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloloc.html",
+    "chandrayaan1": "https://www.isro.gov.in/media_isro/pdf/ResourcesPdf/SpaceIndia/publication%286%29.pdf",
+    "chandrayaan2": "https://www.isro.gov.in/Chandrayaan2_science.html",
+    "chandrayaan2-faq": "https://www.isro.gov.in/ISRO_EN/FAQ_Chandrayaan2.html",
+    "chandrayaan2-lander": "https://www.isro.gov.in/media_isro/pdf/GSLVMkIII_M1.pdf",
+    "chandrayaan2-report": "https://www.isro.gov.in/media_isro/pdf/docs/UsefulLinks/ParliamentQuestions/winter_session_2019.pdf",
+    "chandrayaan3": "https://www.isro.gov.in/Chandrayaan3_Details.html",
+    "chandrayaan3-data": "https://www.isro.gov.in/Release_of_Chandrayaan-3_science_data_to_the_Scientific_Community.html",
+    "chandrayaan3-traverse": "https://www.isro.gov.in/media_isro/pdf/Publications/DishaMagazine/Disha_17thEdition.pdf",
+    "chandrayaan3-science": "https://www.isro.gov.in/media_isro/pdf/APXS_CH3.pdf"
+  },
+  "missions": [
+    {
+      "id": "apollo-8",
+      "name": "Apollo 8",
+      "body": "Moon",
+      "startUtc": "1968-12-21T12:51:00Z",
+      "endLabel": "27 Dec 1968 · crew returned",
+      "missionType": "crewed lunar orbit",
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "21 December 1968 · 12:51 UTC",
+          "dateUtc": "1968-12-21T12:51:00Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Apollo 8 launches on the first crewed journey to lunar orbit. The mission circles the Moon and returns to Earth without attempting a landing.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo8info.html"
+        },
+        {
+          "id": "lunar-orbit",
+          "title": "Lunar orbit",
+          "dateLabel": "24 December 1968",
+          "dateUtc": "1968-12-24",
+          "precision": "day",
+          "scene": "flight",
+          "narration": "The Moon fills the window, and then Earth rises over its horizon. Apollo 8’s crew takes the famous Earthrise photograph. From so far away, our home looks small and bright. Their spacecraft circles the Moon, but this mission leaves no lander or rover on the surface.",
+          "sourceUrl": "https://www.nasa.gov/image-article/apollo-8-earthrise/",
+          "image": {
+            "path": "/assets/apollo8-earthrise.jpg",
+            "credit": "NASA",
+            "caption": "NASA Apollo 8 Earthrise photograph, made from lunar orbit.",
+            "sourceUrl": "https://www.nasa.gov/image-article/apollo-8-earthrise/"
+          }
+        },
+        {
+          "id": "return",
+          "title": "Crew returns to Earth",
+          "dateLabel": "27 December 1968 · 15:51:42 UTC",
+          "dateUtc": "1968-12-27T15:51:42Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Apollo 8 returns to Earth. No Apollo 8 hardware was left on the lunar surface.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo8info.html"
+        }
+      ]
+    },
+    {
+      "id": "apollo-10",
+      "name": "Apollo 10",
+      "body": "Moon",
+      "startUtc": "1969-05-18T16:49:00Z",
+      "endLabel": "26 May 1969 · crew returned",
+      "missionType": "crewed lunar orbit and landing rehearsal",
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "18 May 1969 · 16:49 UTC",
+          "dateUtc": "1969-05-18T16:49:00Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Apollo 10 launches for a crewed rehearsal of lunar descent and ascent, without landing.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo10info.html"
+        },
+        {
+          "id": "lunar-orbit",
+          "title": "Lunar orbit rehearsal",
+          "dateLabel": "21 May 1969",
+          "dateUtc": "1969-05-21",
+          "precision": "day",
+          "scene": "flight",
+          "narration": "The crew tests the Lunar Module near the planned Apollo 11 landing region, then reunites with the Command Module. No lunar surface contact occurs.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo10info.html",
+          "image": {
+            "path": "/assets/apollo10-lunar-orbit.jpg",
+            "credit": "NASA",
+            "caption": "Apollo 10 Command Module photographed from Snoopy in lunar orbit.",
+            "sourceUrl": "https://www.nasa.gov/image-article/apollo-10-command-module-charlie-brown/"
+          }
+        },
+        {
+          "id": "end",
+          "title": "Snoopy is disposed of",
+          "dateLabel": "23 May 1969",
+          "dateUtc": "1969-05-23",
+          "precision": "day",
+          "scene": "flight",
+          "narration": "The Lunar Module ascent stage was sent into heliocentric orbit; its current precise position is not represented.",
+          "sourceUrl": "https://www.nasa.gov/missions/apollo/apollo-10-mission-details/"
+        },
+        {
+          "id": "return",
+          "title": "Crew returns to Earth",
+          "dateLabel": "26 May 1969 · 16:52:23 UTC",
+          "dateUtc": "1969-05-26T16:52:23Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Apollo 10 returns to Earth. No Apollo 10 hardware remains on the lunar surface.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo10info.html"
+        }
+      ]
+    },
+    {
+      "id": "apollo-13",
+      "name": "Apollo 13",
+      "body": "Moon",
+      "startUtc": "1970-04-11T19:13:00Z",
+      "endLabel": "17 Apr 1970 · crew returned",
+      "missionType": "crewed lunar flyby; landing aborted",
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "11 April 1970 · 19:13 UTC",
+          "dateUtc": "1970-04-11T19:13:00Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Apollo 13 launches for a planned lunar landing. An in-flight service module failure forces the crew to use Aquarius as a lifeboat and cancel the landing.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo13info.html"
+        },
+        {
+          "id": "abort",
+          "title": "Landing aborted",
+          "dateLabel": "13 April 1970",
+          "dateUtc": "1970-04-13",
+          "precision": "day",
+          "scene": "flight",
+          "narration": "The crew swings around the Moon and returns toward Earth. No Apollo 13 crew member or lander touched the lunar surface.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo13info.html"
+        },
+        {
+          "id": "end",
+          "title": "Apollo 13 S-IVB impacts the Moon",
+          "dateLabel": "15 April 1970 · 01:09:41 UTC",
+          "dateUtc": "1970-04-15T01:09:41Z",
+          "precision": "0.1 second; Earth-received time, about 1.3 seconds after impact",
+          "scene": "surface",
+          "narration": "The Saturn IVB upper stage was targeted to impact the Moon. This is the mission's only lunar surface impact; it was not a crewed landing. Aquarius later re-entered Earth's atmosphere.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_impact.html",
+          "location": {
+            "lat": -2.555,
+            "lonEast": 332.1125,
+            "precision": "0.0001 degree; longitude converted from 27.8875° W",
+            "site": "S-IVB impact site, lunar far side/near side as mapped by NSSDC",
+            "kind": "impact point"
+          }
+        },
+        {
+          "id": "return",
+          "title": "Crew returns to Earth",
+          "dateLabel": "17 April 1970 · 18:07:41 UTC",
+          "dateUtc": "1970-04-17T18:07:41Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Odyssey splashes down in the Pacific. The crew survives; Aquarius is discarded and burns up in Earth's atmosphere.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo13info.html",
+          "image": {
+            "path": "/assets/apollo13-damage.jpg",
+            "credit": "NASA",
+            "caption": "Apollo 13 damaged Service Module photographed after jettison before Earth return.",
+            "sourceUrl": "https://www.nasa.gov/image-article/damage-from-apollo-13-explosion/"
+          }
+        }
+      ]
+    },
+    {
+      "id": "apollo-11",
+      "name": "Apollo 11",
+      "body": "Moon",
+      "startUtc": "1969-07-16T13:32:00Z",
+      "endLabel": "24 Jul 1969 · crew returned",
+      "site": "Mare Tranquillitatis (Sea of Tranquility)",
+      "landing": {
+        "lat": 0.67416,
+        "lonEast": 23.47314,
+        "precision": "0.00001 degree; LRO/NSSDC coordinate for Lunar Module",
+        "siteName": "Tranquility Base"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "16 July 1969 · 13:32 UTC",
+          "dateUtc": "1969-07-16T13:32:00Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Saturn V lifts Apollo 11 from Kennedy Space Center. The crew travels to lunar orbit in Columbia and descends in Eagle.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo11info.html",
+          "image": {
+            "sourceUrl": "https://www.nasa.gov/image-article/apollo-11-lifts-off/",
+            "credit": "NASA",
+            "caption": "Apollo 11 Saturn V launch.",
+            "path": "/assets/apollo11-launch-official.jpg"
+          }
+        },
+        {
+          "id": "landing",
+          "title": "Eagle lands",
+          "dateLabel": "20 July 1969 · 20:17:40 UTC",
+          "dateUtc": "1969-07-20T20:17:40Z",
+          "precision": "second",
+          "scene": "surface",
+          "narration": "Eagle touches down at Tranquility Base in Mare Tranquillitatis. The descent stage remains on the Moon; the ascent stage later departs with Armstrong and Aldrin.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo11info.html",
+          "location": {
+            "lat": 0.67416,
+            "lonEast": 23.47314,
+            "precision": "0.00001 degree",
+            "site": "Tranquility Base"
+          },
+          "image": {
+            "sourceUrl": "https://science.nasa.gov/resource/apollo-11-landing-site/",
+            "credit": "NASA / LRO",
+            "caption": "LRO view of the Apollo 11 landing site; descent stage and astronaut trails are visible.",
+            "path": "/assets/apollo11-lro.jpg"
+          },
+          "route": {
+            "sourceUrl": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/TraverseMapsEarth.html",
+            "credit": "NASA Apollo Lunar Surface Journal",
+            "caption": "Published Apollo surface traverse map; route is an illustration, not a time-sampled track."
+          }
+        },
+        {
+          "id": "surface",
+          "title": "First steps and surface exploration",
+          "dateLabel": "20–21 July 1969",
+          "dateUtc": "1969-07-20",
+          "precision": "day",
+          "scene": "surface",
+          "narration": "Neil Armstrong and Buzz Aldrin walk near Eagle while Michael Collins waits in lunar orbit. They collect Moon rocks and set up instruments, including a reflector that lets scientists bounce laser light from Earth to measure the Moon’s distance. Eagle’s lower half stays at Tranquility Base when the explorers leave.",
+          "sourceUrl": "https://science.nasa.gov/mission/apollo-11/",
+          "location": {
+            "lat": 0.67416,
+            "lonEast": 23.47314,
+            "precision": "landing-site anchor only",
+            "site": "Tranquility Base"
+          },
+          "route": {
+            "sourceUrl": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/TraverseMapsEarth.html",
+            "credit": "NASA Apollo Lunar Surface Journal",
+            "caption": "NASA's published Apollo traverse map."
+          }
+        },
+        {
+          "id": "end",
+          "title": "Eagle ascent stage departs",
+          "dateLabel": "21 July 1969",
+          "dateUtc": "1969-07-21",
+          "precision": "day",
+          "scene": "flight",
+          "narration": "The ascent stage leaves the descent stage at Tranquility Base. The crew rejoins Columbia and returns to Earth; descent-stage hardware remains on the Moon. The ascent stage's present precise location is not specified here.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloloc.html"
+        },
+        {
+          "id": "return",
+          "title": "Crew returns to Earth",
+          "dateLabel": "24 July 1969 · 16:50:35 UTC",
+          "dateUtc": "1969-07-24T16:50:35Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Columbia splashes down in the Pacific Ocean. Apollo 11's crewed mission ends; the descent stage and surface instruments remain at Tranquility Base.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo11info.html"
+        }
+      ]
+    },
+    {
+      "id": "apollo-12",
+      "name": "Apollo 12",
+      "body": "Moon",
+      "startUtc": "1969-11-14T16:22:00Z",
+      "endLabel": "24 Nov 1969 · crew returned",
+      "site": "Oceanus Procellarum (Ocean of Storms)",
+      "landing": {
+        "lat": -3.0128,
+        "lonEast": 336.5781,
+        "precision": "0.0001 degree; longitude converted from -23.4219° east convention",
+        "siteName": "near Surveyor 3"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "14 November 1969 · 16:22 UTC",
+          "dateUtc": "1969-11-14T16:22:00Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Apollo 12 launches from Kennedy Space Center for a precision landing in Oceanus Procellarum.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo12info.html",
+          "image": {
+            "path": "/assets/apollo12-launch.jpg",
+            "credit": "NASA",
+            "caption": "Apollo 12 Saturn V launches on 14 November 1969.",
+            "sourceUrl": "https://www.nasa.gov/image-article/55-years-ago-apollo-12-launches/"
+          }
+        },
+        {
+          "id": "landing",
+          "title": "Intrepid lands near Surveyor 3",
+          "dateLabel": "19 November 1969 · 06:54:35 UTC",
+          "dateUtc": "1969-11-19T06:54:35Z",
+          "precision": "second",
+          "scene": "surface",
+          "narration": "Intrepid lands in Oceanus Procellarum near Surveyor 3. The published point is the Lunar Module location; Surveyor 3 lies nearby and was visited by the crew.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo12info.html",
+          "location": {
+            "lat": -3.0128,
+            "lonEast": 336.5781,
+            "precision": "0.0001 degree",
+            "site": "Oceanus Procellarum"
+          },
+          "route": {
+            "sourceUrl": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/TraverseMapsEarth.html",
+            "credit": "NASA Apollo Lunar Surface Journal",
+            "caption": "Published traverse map; illustrative surface route."
+          },
+          "image": {
+            "sourceUrl": "https://science.nasa.gov/photojournal/first-look-apollo-12-and-surveyor-3/",
+            "credit": "NASA/GSFC/Arizona State University · PIA12903",
+            "caption": "LRO image shows Intrepid descent stage, ALSEP, Surveyor 3 and astronaut tracks.",
+            "path": "/assets/apollo12-lro.jpg"
+          }
+        },
+        {
+          "id": "surface",
+          "title": "Two EVAs and a visit to Surveyor 3",
+          "dateLabel": "19–20 November 1969",
+          "dateUtc": "1969-11-19",
+          "precision": "day",
+          "scene": "surface",
+          "narration": "Apollo 12 lands close enough to visit Surveyor 3, a robot that reached the Moon two years earlier. Pete Conrad and Alan Bean walk over, take photographs, and bring pieces of that older spacecraft home for study. They also collect rocks and set up instruments. Two missions meet in one lunar neighborhood.",
+          "sourceUrl": "https://www.nasa.gov/mission/apollo-12/",
+          "route": {
+            "sourceUrl": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/TraverseMapsEarth.html",
+            "credit": "NASA Apollo Lunar Surface Journal",
+            "caption": "Published Apollo 12 traverse map."
+          }
+        },
+        {
+          "id": "end",
+          "title": "Intrepid ascent stage departs",
+          "dateLabel": "20 November 1969 · 22:17:17.7 UTC impact",
+          "dateUtc": "1969-11-20T22:17:17.7Z",
+          "precision": "0.1 second; Earth-received time, about 1.3 seconds after impact",
+          "scene": "surface",
+          "narration": "After crew transfer, Intrepid's ascent stage was deliberately directed to impact the Moon. Its known final site is 3.94° S, 338.80° E. The descent stage, ALSEP and Surveyor 3 components remain near the landing site.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_impact.html",
+          "location": {
+            "lat": -3.94,
+            "lonEast": 338.8,
+            "precision": "0.01 degree; longitude converted from 21.20° W",
+            "site": "Apollo 12 LM ascent-stage impact",
+            "kind": "impact point"
+          }
+        },
+        {
+          "id": "return",
+          "title": "Crew returns to Earth",
+          "dateLabel": "24 November 1969 · 20:58:24 UTC",
+          "dateUtc": "1969-11-24T20:58:24Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Yankee Clipper splashes down in the Pacific. Intrepid's descent stage, ALSEP and visited Surveyor 3 hardware remain on the Moon.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo12info.html"
+        }
+      ]
+    },
+    {
+      "id": "apollo-14",
+      "name": "Apollo 14",
+      "body": "Moon",
+      "startUtc": "1971-01-31T21:03:02Z",
+      "endLabel": "9 Feb 1971 · crew returned",
+      "site": "Fra Mauro",
+      "landing": {
+        "lat": -3.64589,
+        "lonEast": 342.52806,
+        "precision": "0.00001 degree; longitude converted from -17.47194°",
+        "siteName": "Fra Mauro"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "31 January 1971 · 21:03:02 UTC",
+          "dateUtc": "1971-01-31T21:03:02Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Apollo 14 launches from Kennedy Space Center toward the Fra Mauro highlands.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo14info.html"
+        },
+        {
+          "id": "landing",
+          "title": "Antares lands at Fra Mauro",
+          "dateLabel": "5 February 1971 · 09:18:11 UTC",
+          "dateUtc": "1971-02-05T09:18:11Z",
+          "precision": "second",
+          "scene": "surface",
+          "narration": "Antares lands in the Fra Mauro region. The coordinate marks the Lunar Module landing point, not the full extent of surface exploration.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo14info.html",
+          "location": {
+            "lat": -3.64589,
+            "lonEast": 342.52806,
+            "precision": "0.00001 degree",
+            "site": "Fra Mauro"
+          },
+          "route": {
+            "sourceUrl": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/TraverseMapsEarth.html",
+            "credit": "NASA Apollo Lunar Surface Journal",
+            "caption": "Published traverse map; illustrative route."
+          },
+          "image": {
+            "sourceUrl": "https://science.nasa.gov/photojournal/new-view-of-apollo-14/",
+            "credit": "NASA/GSFC/Arizona State University · PIA14003",
+            "caption": "LRO image shows Antares descent stage, ALSEP and astronaut tracks.",
+            "path": "/assets/apollo14-lro.jpg"
+          }
+        },
+        {
+          "id": "surface",
+          "title": "Two EVAs across Fra Mauro",
+          "dateLabel": "5–6 February 1971",
+          "dateUtc": "1971-02-05",
+          "precision": "day",
+          "scene": "surface",
+          "narration": "Alan Shepard and Edgar Mitchell pull a small cart of tools across the Fra Mauro hills. They collect rocks that may help tell the story of a huge ancient impact. Their instruments stay behind to keep measuring the Moon after the astronauts return home.",
+          "sourceUrl": "https://science.nasa.gov/mission/apollo-14/",
+          "route": {
+            "sourceUrl": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/TraverseMapsEarth.html",
+            "credit": "NASA Apollo Lunar Surface Journal",
+            "caption": "Published Apollo 14 traverse map."
+          }
+        },
+        {
+          "id": "end",
+          "title": "Antares ascent stage impacts the Moon",
+          "dateLabel": "7 February 1971 · 00:45:25.7 UTC",
+          "dateUtc": "1971-02-07T00:45:25.7Z",
+          "precision": "0.1 second; Earth-received time, about 1.3 seconds after impact",
+          "scene": "surface",
+          "narration": "After crew transfer, Antares' ascent stage was directed to impact the Moon at the location published by NSSDC. The descent stage and ALSEP remain at Fra Mauro.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_impact.html",
+          "location": {
+            "lat": -3.42,
+            "lonEast": 340.33,
+            "precision": "0.01 degree; longitude converted from 19.67° W",
+            "site": "Apollo 14 LM ascent-stage impact",
+            "kind": "impact point"
+          }
+        },
+        {
+          "id": "return",
+          "title": "Crew returns to Earth",
+          "dateLabel": "9 February 1971 · 21:05 UTC",
+          "dateUtc": "1971-02-09T21:05:00Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Kitty Hawk returns the crew to Earth. Antares' descent stage and experiments remain at Fra Mauro.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo14info.html"
+        }
+      ]
+    },
+    {
+      "id": "apollo-15",
+      "name": "Apollo 15",
+      "body": "Moon",
+      "startUtc": "1971-07-26T13:34:00Z",
+      "endLabel": "7 Aug 1971 · crew returned",
+      "site": "Hadley-Apennine",
+      "landing": {
+        "lat": 26.13239,
+        "lonEast": 3.6333,
+        "precision": "0.00001 degree; LRO/NSSDC Lunar Module coordinate",
+        "siteName": "Hadley-Apennine"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "26 July 1971 · 13:34 UTC",
+          "dateUtc": "1971-07-26T13:34:00Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Apollo 15 begins the first extended lunar surface expedition, carrying a battery-powered lunar roving vehicle.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo15info.html"
+        },
+        {
+          "id": "landing",
+          "title": "Falcon lands at Hadley-Apennine",
+          "dateLabel": "30 July 1971 · 22:16:29 UTC",
+          "dateUtc": "1971-07-30T22:16:29Z",
+          "precision": "second",
+          "scene": "surface",
+          "narration": "Falcon lands beside Hadley Rille. The coordinate marks the Lunar Module; the rover's excursions are represented from published mission maps.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo15info.html",
+          "location": {
+            "lat": 26.13239,
+            "lonEast": 3.6333,
+            "precision": "0.00001 degree",
+            "site": "Hadley-Apennine"
+          },
+          "route": {
+            "sourceUrl": "https://www.nasa.gov/image-article/apollo-15-interplanetary-mountaineers/",
+            "credit": "NASA Apollo Lunar Surface Journal",
+            "caption": "Published traverse map, including lunar rover traverses."
+          },
+          "image": {
+            "sourceUrl": "https://www.nasa.gov/image-article/apollo-15-interplanetary-mountaineers/",
+            "credit": "NASA",
+            "caption": "LRO image annotated with Apollo 15 traverse plots.",
+            "path": "/assets/apollo15-lro.png"
+          }
+        },
+        {
+          "id": "surface",
+          "title": "Three EVAs with the lunar rover",
+          "dateLabel": "31 July–2 August 1971",
+          "dateUtc": "1971-07-31",
+          "precision": "day",
+          "scene": "surface",
+          "narration": "For the first time, astronauts drive an electric rover on the Moon. David Scott and James Irwin travel across Hadley-Apennine, gathering rocks and photographs far beyond their landing spot. One pale sample, nicknamed the Genesis Rock, preserves a piece of the Moon’s ancient crust. The rover stays parked near Falcon.",
+          "sourceUrl": "https://science.nasa.gov/solar-system/moon/genesis-rock/",
+          "route": {
+            "path": "/assets/apollo15-traverse.png",
+            "credit": "NASA / LRO Camera",
+            "caption": "LRO map annotates the first two Apollo 15 moonwalk routes; the third is not drawn.",
+            "sourceUrl": "https://www.nasa.gov/image-article/apollo-15-interplanetary-mountaineers/"
+          },
+          "image": {
+            "path": "/assets/apollo15-rover.jpg",
+            "credit": "NASA",
+            "caption": "Astronaut James Irwin works beside the lunar rover on 31 July 1971, during the first Apollo 15 EVA.",
+            "sourceUrl": "https://science.nasa.gov/resource/apollo-15-on-the-moon/"
+          }
+        },
+        {
+          "id": "end",
+          "title": "Falcon ascent stage impacts the Moon",
+          "dateLabel": "3 August 1971 · 03:03:37 UTC",
+          "dateUtc": "1971-08-03T03:03:37Z",
+          "precision": "0.1 second; Earth-received time, about 1.3 seconds after impact",
+          "scene": "surface",
+          "narration": "After crew transfer, Falcon's ascent stage was directed to impact the Moon. Its published impact coordinate is separate from the descent stage, ALSEP and rover that remain at Hadley-Apennine.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_impact.html",
+          "location": {
+            "lat": 26.36,
+            "lonEast": 0.25,
+            "precision": "0.01 degree",
+            "site": "Apollo 15 LM ascent-stage impact",
+            "kind": "impact point"
+          }
+        },
+        {
+          "id": "return",
+          "title": "Crew returns to Earth",
+          "dateLabel": "7 August 1971 · 20:45:53 UTC",
+          "dateUtc": "1971-08-07T20:45:53Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Endeavour splashes down in the Pacific, concluding the crewed mission. Surface equipment remains at Hadley-Apennine.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo15info.html"
+        }
+      ]
+    },
+    {
+      "id": "apollo-16",
+      "name": "Apollo 16",
+      "body": "Moon",
+      "startUtc": "1972-04-16T17:54:00Z",
+      "endLabel": "27 Apr 1972 · crew returned",
+      "site": "Descartes highlands",
+      "landing": {
+        "lat": -8.9734,
+        "lonEast": 15.5011,
+        "precision": "0.0001 degree; LRO/NSSDC Lunar Module coordinate",
+        "siteName": "Descartes"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "16 April 1972 · 17:54 UTC",
+          "dateUtc": "1972-04-16T17:54:00Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Apollo 16 launches for the Descartes highlands, carrying a lunar rover and surface experiments.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo16info.html"
+        },
+        {
+          "id": "landing",
+          "title": "Orion lands at Descartes",
+          "dateLabel": "21 April 1972 · 02:23:35 UTC",
+          "dateUtc": "1972-04-21T02:23:35Z",
+          "precision": "second",
+          "scene": "surface",
+          "narration": "Orion lands in the Descartes highlands. The coordinate marks the Lunar Module site.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo16info.html",
+          "location": {
+            "lat": -8.9734,
+            "lonEast": 15.5011,
+            "precision": "0.0001 degree",
+            "site": "Descartes"
+          },
+          "route": {
+            "sourceUrl": "https://www.nasa.gov/history/apollo-16-on-the-moon-at-descartes/",
+            "credit": "NASA Apollo Lunar Surface Journal",
+            "caption": "Published traverse map, including rover excursions."
+          },
+          "image": {
+            "sourceUrl": "https://science.nasa.gov/photojournal/apollo-16-footsteps-under-high-sun/",
+            "credit": "NASA/GSFC/Arizona State University",
+            "caption": "LRO image shows Orion descent stage and disturbed regolith marking astronaut traverses.",
+            "path": "/assets/apollo16-lro.jpg"
+          }
+        },
+        {
+          "id": "surface",
+          "title": "Three rover-supported EVAs",
+          "dateLabel": "21–23 April 1972",
+          "dateUtc": "1972-04-21",
+          "precision": "day",
+          "scene": "surface",
+          "narration": "John Young and Charlie Duke drive their lunar rover over the Descartes highlands. They pick up rocks and photograph ground that once looked volcanic from afar. The samples helped scientists test that idea; many highland rocks told a story of impacts instead. The rover and Orion’s lower half remain on the Moon.",
+          "sourceUrl": "https://www.nasa.gov/missions/apollo/apollo-16-mission-details/",
+          "route": {
+            "path": "/assets/apollo16-traverse.png",
+            "credit": "NASA",
+            "caption": "Published Apollo 16 traverse map with three excursions and named landmarks.",
+            "sourceUrl": "https://www.nasa.gov/history/apollo-16-on-the-moon-at-descartes/"
+          },
+          "image": {
+            "path": "/assets/apollo16-rover.jpg",
+            "credit": "NASA",
+            "caption": "John Young drives the lunar rover during the Apollo 16 Grand Prix near the landing site.",
+            "sourceUrl": "https://www.nasa.gov/image-article/john-young-driving-lunar-rover/"
+          }
+        },
+        {
+          "id": "end",
+          "title": "Orion ascent stage departs",
+          "dateLabel": "23 April 1972",
+          "dateUtc": "1972-04-23",
+          "precision": "day",
+          "scene": "flight",
+          "narration": "The ascent stage leaves Orion's descent stage, ALSEP and rover at Descartes. The rover's final position is not given as a point here.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apolloloc.html"
+        },
+        {
+          "id": "return",
+          "title": "Crew returns to Earth",
+          "dateLabel": "27 April 1972 · 19:45:05 UTC",
+          "dateUtc": "1972-04-27T19:45:05Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "Casper splashes down in the Pacific. The descent stage, ALSEP and rover remain at Descartes.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo16info.html"
+        }
+      ]
+    },
+    {
+      "id": "apollo-17",
+      "name": "Apollo 17",
+      "body": "Moon",
+      "startUtc": "1972-12-07T05:33:00Z",
+      "endLabel": "19 Dec 1972 · crew returned",
+      "site": "Taurus-Littrow",
+      "landing": {
+        "lat": 20.1911,
+        "lonEast": 30.7723,
+        "precision": "0.0001 degree; LRO/NSSDC Lunar Module coordinate",
+        "siteName": "Taurus-Littrow"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "7 December 1972 · 05:33 UTC",
+          "dateUtc": "1972-12-07T05:33:00Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "The sky is dark at Kennedy Space Center. Then Apollo 17’s Saturn V lights the night like a giant torch. Gene Cernan, Harrison Schmitt, and Ron Evans are heading toward the Moon. Two will walk in Taurus–Littrow, where a rover will help them search for clues in the rocks; one will wait in lunar orbit.",
+          "sourceUrl": "https://science.nasa.gov/resource/apollo-17-launch/",
+          "image": {
+            "path": "/assets/apollo17-launch.jpg",
+            "credit": "NASA",
+            "caption": "Apollo 17 lifts off at night on 7 December 1972.",
+            "sourceUrl": "https://science.nasa.gov/resource/apollo-17-launch/"
+          }
+        },
+        {
+          "id": "landing",
+          "title": "Challenger lands at Taurus-Littrow",
+          "dateLabel": "11 December 1972 · 19:54:57 UTC",
+          "dateUtc": "1972-12-11T19:54:57Z",
+          "precision": "second",
+          "scene": "surface",
+          "narration": "Challenger lands in the Taurus-Littrow valley. The coordinate marks the Lunar Module landing site.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo17info.html",
+          "location": {
+            "lat": 20.1911,
+            "lonEast": 30.7723,
+            "precision": "0.0001 degree",
+            "site": "Taurus-Littrow"
+          },
+          "route": {
+            "sourceUrl": "https://www.nasa.gov/history/50-years-ago-apollo-17-lands-at-taurus-littrow/",
+            "credit": "NASA Apollo Lunar Surface Journal",
+            "caption": "Published traverse map, including rover routes."
+          },
+          "image": {
+            "sourceUrl": "https://science.nasa.gov/photojournal/exploring-the-apollo-17-site/",
+            "credit": "NASA/GSFC/Arizona State University · PIA12920",
+            "caption": "LRO close view of Challenger descent stage at Taurus-Littrow.",
+            "path": "/assets/apollo17-lro.jpg"
+          }
+        },
+        {
+          "id": "surface",
+          "title": "Three EVAs and the longest rover traverse",
+          "dateLabel": "11–14 December 1972",
+          "dateUtc": "1972-12-11",
+          "precision": "day",
+          "scene": "surface",
+          "narration": "Gene Cernan and geologist Harrison Schmitt drive through Taurus–Littrow. Near Shorty Crater, Schmitt spots bright orange soil. It turns out to be ancient volcanic glass, a clue that fire once erupted here. They photograph and collect rocks, then park the rover to film their departure. It remains in the valley.",
+          "sourceUrl": "https://www.nasa.gov/history/50-years-ago-apollo-17-lands-at-taurus-littrow/",
+          "route": {
+            "path": "/assets/apollo17-traverse.jpg",
+            "credit": "NASA",
+            "caption": "Published Apollo 17 surface traverse map with stations and named landmarks.",
+            "sourceUrl": "https://www.nasa.gov/history/50-years-ago-apollo-17-lands-at-taurus-littrow/"
+          },
+          "image": {
+            "path": "/assets/apollo17-rover.jpg",
+            "credit": "NASA",
+            "caption": "Gene Cernan stands beside the Apollo 17 lunar rover at Taurus–Littrow.",
+            "sourceUrl": "https://science.nasa.gov/image-article/apod-2001-june-9-apollo-17s-lunar-rover/"
+          }
+        },
+        {
+          "id": "end",
+          "title": "Challenger ascent stage impacts the Moon",
+          "dateLabel": "15 December 1972 · 06:50:20.8 UTC",
+          "dateUtc": "1972-12-15T06:50:20.8Z",
+          "precision": "0.1 second; Earth-received time, about 1.3 seconds after impact",
+          "scene": "surface",
+          "narration": "After crew transfer, Challenger's ascent stage was directed to impact the Moon. Its published impact point is separate from the descent stage, rover and ALSEP remaining at Taurus-Littrow.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_impact.html",
+          "location": {
+            "lat": 19.97,
+            "lonEast": 30.49,
+            "precision": "0.01 degree",
+            "site": "Apollo 17 LM ascent-stage impact",
+            "kind": "impact point"
+          }
+        },
+        {
+          "id": "return",
+          "title": "Crew returns to Earth",
+          "dateLabel": "19 December 1972 · 19:24:59 UTC",
+          "dateUtc": "1972-12-19T19:24:59Z",
+          "precision": "second",
+          "scene": "flight",
+          "narration": "America splashes down in the Pacific. Apollo 17 is the last crewed lunar landing to date; its surface hardware remains at Taurus-Littrow.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo17info.html"
+        }
+      ]
+    },
+    {
+      "id": "chandrayaan-1",
+      "name": "Chandrayaan-1",
+      "body": "Moon",
+      "startUtc": "2008-10-22T00:52:00Z",
+      "endLabel": "28 Aug 2009 UTC · contact lost",
+      "site": "South polar region (impact point not published to precise coordinates)",
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "22 October 2008 · 00:52 UTC",
+          "dateUtc": "2008-10-22T00:52:00Z",
+          "precision": "minute",
+          "scene": "flight",
+          "narration": "Chandrayaan-1 launches from Satish Dhawan Space Centre, carrying an orbiter and the Moon Impact Probe.",
+          "sourceUrl": "https://www.isro.gov.in/Chandrayaan1.html"
+        },
+        {
+          "id": "impact",
+          "title": "Moon Impact Probe reaches the surface",
+          "dateLabel": "14 November 2008 · 15:01 UTC",
+          "dateUtc": "2008-11-14T15:01:00Z",
+          "precision": "minute",
+          "scene": "surface",
+          "narration": "A small part of Chandrayaan-1, the Moon Impact Probe, separates and heads toward the Moon. Above it, the orbiter’s NASA Moon Mineralogy Mapper studies reflected light and finds signs of water-bearing molecules across the lunar surface. The impact probe is left near the south polar region; its exact point is less certain than a pinpoint on a map.",
+          "sourceUrl": "https://science.nasa.gov/mission/chandrayaan-1/",
+          "image": {
+            "path": "/assets/chandrayaan1-water-map.jpg",
+            "credit": "ISRO / NASA / JPL-Caltech / Brown University / USGS",
+            "caption": "NASA Moon Mineralogy Mapper result from Chandrayaan-1; not the impact site.",
+            "sourceUrl": "https://science.nasa.gov/mission/chandrayaan-1/"
+          }
+        },
+        {
+          "id": "end",
+          "title": "Orbiter mission ends",
+          "dateLabel": "28 August 2009 · 20:00 UTC",
+          "dateUtc": "2009-08-28T20:00:00Z",
+          "precision": "minute",
+          "scene": "flight",
+          "narration": "Contact with Chandrayaan-1 ended at 20:00 UTC on 28 August, or 29 August in India. The Moon Impact Probe had already reached the lunar south polar region; its exact impact point is not placed here.",
+          "sourceUrl": "https://science.nasa.gov/mission/chandrayaan-1/"
+        }
+      ]
+    },
+    {
+      "id": "chandrayaan-2",
+      "name": "Chandrayaan-2",
+      "body": "Moon",
+      "startUtc": "2019-07-22T09:13:00Z",
+      "endLabel": "Orbiter continues; lander lost in 2019",
+      "site": "Planned site between Manzinus C and Simpelius N; actual hard-landing point only reported within 500 m of target",
+      "landing": {
+        "lat": -70.9,
+        "lonEast": 22.7,
+        "precision": "approximately 0.1 degree; ISRO planned landing site, not observed impact coordinate",
+        "siteName": "between Manzinus C and Simpelius N",
+        "status": "plannedSiteOnly"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "22 July 2019 · 09:13 UTC",
+          "dateUtc": "2019-07-22T09:13:00Z",
+          "precision": "minute",
+          "scene": "flight",
+          "narration": "GSLV MkIII-M1 launches Chandrayaan-2 from Satish Dhawan Space Centre. The mission includes an orbiter, Vikram lander and Pragyan rover.",
+          "sourceUrl": "https://www.isro.gov.in/Chandrayaan2_science.html",
+          "image": {
+            "path": "/assets/chandrayaan2-launch-vehicle.webp",
+            "credit": "ISRO",
+            "caption": "ISRO Chandrayaan-2 launch vehicle image.",
+            "sourceUrl": "https://www.isro.gov.in/Chandrayan_2.html"
+          }
+        },
+        {
+          "id": "separation",
+          "title": "Vikram separates from the orbiter",
+          "dateLabel": "2 September 2019",
+          "dateUtc": "2019-09-02",
+          "precision": "day",
+          "scene": "flight",
+          "narration": "Vikram separates from the orbiter and performs orbit-lowering maneuvers ahead of its planned landing.",
+          "sourceUrl": "https://www.isro.gov.in/mission_GSLVMkIIIM1.html"
+        },
+        {
+          "id": "impact",
+          "title": "Communication lost during descent",
+          "dateLabel": "7 September 2019 IST · exact UTC time not published here",
+          "dateUtc": "2019-09-07",
+          "precision": "day",
+          "scene": "surface",
+          "narration": "Vikram tries to land near the Moon’s south pole, but its signal is lost during descent. The lander and its Pragyan rover do not complete their planned surface science. The orbiter continues looking down at the Moon. The lost lander still marks a place where engineers learned how to make the next attempt safer.",
+          "sourceUrl": "https://www.isro.gov.in/Chandrayan_2.html",
+          "location": {
+            "lat": -70.9,
+            "lonEast": 22.7,
+            "precision": "approximate target only",
+            "site": "between Manzinus C and Simpelius N",
+            "status": "plannedSiteOnly"
+          }
+        },
+        {
+          "id": "end",
+          "title": "Orbiter continues the mission",
+          "dateLabel": "Orbiter operational; no end date asserted",
+          "dateUtc": null,
+          "precision": "ongoing at source publication",
+          "scene": "flight",
+          "narration": "The lander and rover demonstration ended during descent, while the orbiter continued science observations. ISRO's FAQ describes an almost seven-year orbiter life rather than a one-year design life; a final end-of-life date is not asserted in this dataset.",
+          "sourceUrl": "https://www.isro.gov.in/ISRO_EN/FAQ_Chandrayaan2.html"
+        }
+      ]
+    },
+    {
+      "id": "chandrayaan-3",
+      "name": "Chandrayaan-3",
+      "body": "Moon",
+      "startUtc": "2023-07-14T09:05:00Z",
+      "endLabel": "22 Sep 2023 · no contact restored",
+      "site": "Shiv Shakti Point, southern lunar high latitudes",
+      "landing": {
+        "lat": -69.367621,
+        "lonEast": 32.348126,
+        "precision": "published to 0.000001 degree by ISRO for planned prime site; reported touchdown rounded to 0.01 degree",
+        "siteName": "Shiv Shakti Point"
+      },
+      "phases": [
+        {
+          "id": "launch",
+          "title": "Launch",
+          "dateLabel": "14 July 2023 · 09:05 UTC",
+          "dateUtc": "2023-07-14T09:05:00Z",
+          "precision": "minute",
+          "scene": "flight",
+          "narration": "LVM3 launches the propulsion module, Vikram lander and Pragyan rover from Satish Dhawan Space Centre.",
+          "sourceUrl": "https://www.isro.gov.in/Chandrayaan3_Details.html"
+        },
+        {
+          "id": "landing",
+          "title": "Vikram lands at Shiv Shakti Point",
+          "dateLabel": "23 August 2023 · 12:34 UTC",
+          "dateUtc": "2023-08-23T12:34:00Z",
+          "precision": "minute",
+          "scene": "surface",
+          "narration": "Vikram settles onto the Moon near its south polar region at Shiv Shakti Point. It is a lander and a little rover named Pragyan. The lander stays at the landing spot while Pragyan rolls out to examine nearby soil. Look at the two pieces of hardware: both remain part of this place.",
+          "sourceUrl": "https://www.isro.gov.in/Chandrayaan3_Details.html",
+          "location": {
+            "lat": -69.367621,
+            "lonEast": 32.348126,
+            "precision": "planned prime site to 0.000001 degree; actual reported landing rounded to 0.01 degree",
+            "site": "Shiv Shakti Point",
+            "status": "reportedTouchdownRounded"
+          },
+          "image": {
+            "path": "/assets/chandrayaan3-orbital-site.jpg",
+            "credit": "ISRO",
+            "caption": "ISRO orbital image of the Chandrayaan-3 landing region; surface hardware is not resolved here.",
+            "sourceUrl": "https://www.isro.gov.in/ch3_Discovery_of_a_buried_crater_on_the_moon.html"
+          }
+        },
+        {
+          "id": "surface",
+          "title": "Pragyan explores nearby ground",
+          "dateLabel": "23 August–2 September 2023",
+          "dateUtc": "2023-08-23",
+          "precision": "day",
+          "scene": "surface",
+          "narration": "Pragyan rolls across the dusty Moon. Its laser instrument makes tiny flashes on the soil to learn what elements are there. ISRO reports sulfur measured directly in this south polar region, along with other elements. Vikram also measures the ground’s temperature. These small robots turn one landing spot into a science classroom.",
+          "sourceUrl": "https://www.isro.gov.in/ISRO_EN/LIBSResults.html",
+          "location": {
+            "lat": -69.367621,
+            "lonEast": 32.348126,
+            "precision": "landing anchor, not rover position",
+            "site": "Shiv Shakti Point"
+          },
+          "route": {
+            "sourceUrl": "https://www.isro.gov.in/media_isro/pdf/Publications/DishaMagazine/Disha_17thEdition.pdf",
+            "credit": "ISRO / Disha magazine",
+            "caption": "ISRO-published Pragyan traverse map, labelled total traverse 104.4 m."
+          },
+          "image": {
+            "path": "/assets/chandrayaan3-vikram-from-pragyan.jpg",
+            "credit": "ISRO",
+            "caption": "Vikram and its ChaSTE temperature probe photographed by Pragyan on the lunar surface.",
+            "sourceUrl": "https://www.isro.gov.in/ISRO_EN/India_Bags_Credit_First-Ever_In-Situ_Measurement.html"
+          }
+        },
+        {
+          "id": "sleep",
+          "title": "Lander and rover enter sleep mode",
+          "dateLabel": "4 September 2023",
+          "dateUtc": "2023-09-04",
+          "precision": "day",
+          "scene": "surface",
+          "narration": "Night comes to the Moon, and the sunlight-powered lander and rover go to sleep. They do not wake when the next lunar day begins. Vikram and Pragyan stay at Shiv Shakti Point, leaving their measurements and photographs for scientists to study.",
+          "sourceUrl": "https://www.isro.gov.in/Chandrayaan3_Details.html",
+          "location": {
+            "lat": -69.367621,
+            "lonEast": 32.348126,
+            "precision": "landing anchor only; rover resting point not located",
+            "site": "Shiv Shakti vicinity"
+          }
+        },
+        {
+          "id": "end",
+          "title": "Mission operations conclude",
+          "dateLabel": "22 September 2023 · no contact re-established",
+          "dateUtc": "2023-09-22",
+          "precision": "day",
+          "scene": "surface",
+          "narration": "ISRO announced efforts to establish communication with the lander and rover were underway, with no recovery reported. Vikram and Pragyan remain on the lunar surface near Shiv Shakti Point; no exact final coordinates or orientation are asserted.",
+          "sourceUrl": "https://www.isro.gov.in/Chandrayaan3.html"
+        }
+      ]
+    }
+  ]
+}

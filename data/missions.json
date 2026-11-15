@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "coordinateSystem": "Mars planetocentric latitude, positive-east longitude 0–360; IAU/USGS modern convention",
+  "missions": [
+    {
+      "id": "mer-b-opportunity",
+      "name": "Opportunity",
+      "designation": "Mars Exploration Rover B (MER-B)",
+      "audience": "School-age explorers, approximately 7–10",
+      "missionType": "Solar-powered robotic geologist",
+      "narrativeTitle": "The little rover that kept asking about water.",
+      "titleAccent": "about water.",
+      "overview": "Follow Opportunity from Earth to a tiny crater on Mars, then across 45 kilometres of discoveries to the valley where its last signal began.",
+      "ride": {"path":"/ride.html","question":"Curious what Opportunity saw along the way?","description":"Take a ride through dated rover-camera snapshots across fourteen years on Mars."},
+      "launch": {
+        "utc": "2003-07-08T03:18:15Z",
+        "precision": "second",
+        "site": "Cape Canaveral Air Force Station, Florida, Earth",
+        "vehicle": "Delta II 7925H",
+        "sources": ["jpl-navigation", "nasa-opportunity"]
+      },
+      "arrival": {
+        "utcDate": "2004-01-25",
+        "precision": "day",
+        "note": "NASA sources agree on the UTC date. A NASA Science page prints 21:05 PST alongside an inconsistent 04:54 UTC; 21:05 PST converts to 05:05 UTC. JPL's prelanding 05:05 UTC is a scheduled arrival time, so this experience does not claim a measured touchdown second.",
+        "sources": ["nasa-opportunity", "jpl-arrival"]
+      },
+      "locations": [
+        {
+          "id": "eagle-landing",
+          "name": "Eagle Crater",
+          "region": "Meridiani Planum",
+          "latitude": -1.9483,
+          "longitudeEast": 354.47417,
+          "latitudeDecimals": 4,
+          "longitudeDecimals": 5,
+          "kind": "landing site",
+          "certainty": "NASA published landing coordinates",
+          "geometry": "point",
+          "sources": ["nasa-opportunity"]
+        },
+        {
+          "id": "endeavour-crater",
+          "name": "Endeavour Crater",
+          "region": "Meridiani Planum",
+          "latitude": -2.28,
+          "longitudeEast": 354.80,
+          "latitudeDecimals": 2,
+          "longitudeDecimals": 2,
+          "kind": "named crater",
+          "certainty": "IAU crater centre, not the rover's position",
+          "geometry": "feature centre",
+          "sources": ["usgs-endeavour"]
+        },
+        {
+          "id": "perseverance-valley",
+          "name": "Perseverance Valley",
+          "region": "Western rim of Endeavour Crater",
+          "kind": "final known area",
+          "certainty": "Shown on NASA's final traverse map; no point coordinates asserted here",
+          "geometry": "named area",
+          "sources": ["nasa-final-map", "nasa-legacy-pan"]
+        }
+      ],
+      "artifacts": [
+        {
+          "id": "opportunity-rover",
+          "name": "Opportunity rover",
+          "type": "rover",
+          "state": "Inactive after June 2018",
+          "locationId": "perseverance-valley",
+          "sources": ["nasa-opportunity", "nasa-final-map"]
+        },
+        {
+          "id": "opportunity-lander",
+          "name": "Opportunity landing platform",
+          "type": "discarded landing hardware",
+          "state": "At Eagle Crater",
+          "locationId": "eagle-landing",
+          "sources": ["nasa-lander"]
+        },
+        {
+          "id": "opportunity-heat-shield",
+          "name": "Opportunity heat shield",
+          "type": "discarded entry hardware",
+          "state": "Observed by the rover and from orbit; individual coordinates not asserted in this edition",
+          "locationId": null,
+          "sources": ["nasa-opportunity"]
+        }
+      ],
+      "chapters": [
+        {
+          "id": "launch",
+          "eyebrow": "01 / LEAVING EARTH",
+          "title": "A question rides a rocket",
+          "dateLabel": "8 July 2003 · 03:18:15 UTC",
+          "dateUtc": "2003-07-08T03:18:15Z",
+          "scene": "solar",
+          "artifactIds": ["opportunity-rover"],
+          "locationId": null,
+          "story": "Imagine a small robot tucked inside a spacecraft at Cape Canaveral. Its name is Opportunity, and it has a question: did water once change the rocks on Mars? On 8 July 2003, a Delta II rocket lifts it away from Earth. The rocket will not travel all the way with it. Opportunity's spacecraft will cross space for more than six months. This opening scene is a simple diagram. Open the mission atlas to follow the archived SPICE spacecraft path through space.",
+          "fact": "The launch time is recorded to the second. The separate mission atlas plots archived SPICE spacecraft positions; this opening scene is schematic.",
+          "sources": ["jpl-navigation", "nasa-opportunity"]
+        },
+        {
+          "id": "landing",
+          "eyebrow": "02 / A LUCKY LANDING",
+          "title": "A hole in one on Mars",
+          "dateLabel": "25 January 2004 · UTC date",
+          "dateUtc": "2004-01-25",
+          "scene": "mars",
+          "artifactIds": ["opportunity-lander", "opportunity-rover"],
+          "objectLabel": "Landing platform + rover",
+          "ground": {"type": "panorama", "path": "/assets/eagle-pan.jpg", "title": "Inside Eagle Crater", "note": "Opportunity's first 360° colour panorama, published by NASA on 2 February 2004. A rover-camera view, not a surveyed position on the orbital map.", "credit": "NASA / JPL-Caltech / Cornell · PIA05199", "vaov": 44.4, "source": "nasa-first-pan"},
+          "locationId": "eagle-landing",
+          "image": {"path": "/assets/landing-close.jpg", "alt": "Opportunity looks back at its empty landing platform and tracks on Mars", "credit": "NASA / JPL-Caltech · PIA05575"},
+          "story": "Now we are above Mars. Opportunity falls through the thin atmosphere, protected by a heat shield, parachute, and airbags. It bounces across Meridiani Planum and comes to rest inside a small crater: Eagle. When the airbags retract, its landing platform opens like a flower. Opportunity drives away, but the platform stays here. Switch to the rover's view to look around the crater; this panorama was taken days after landing.",
+          "fact": "NASA gives the landing site as 1.9483° S, 354.47417° E. The Eagle Crater platform is visible in later orbital imagery.",
+          "sources": ["nasa-opportunity", "nasa-lander", "nasa-home"]
+        },
+        {
+          "id": "water",
+          "eyebrow": "03 / THE FIRST CLUE",
+          "title": "What did the rocks remember?",
+          "dateLabel": "March 2004",
+          "dateUtc": "2004-03",
+          "scene": "mars",
+          "artifactIds": ["opportunity-rover"],
+          "ground": {"type": "panorama", "path": "/assets/eagle-lion-8192.jpg", "title": "Looking back into Eagle Crater", "note": "Opportunity's 360° 'Lion King' panorama, captured on sols 58 and 60 and released 14 April 2004. The empty lander is visible inside the crater.", "credit": "NASA / JPL / Cornell · PIA05755", "vaov": 71.1, "source": "nasa-lion-pan"},
+          "locationId": "eagle-landing",
+          "image": {"path": "/assets/water.jpg", "alt": "Opportunity's close view of the Berry Bowl rock and its round hematite grains", "credit": "NASA / JPL-Caltech / Cornell · PIA05634"},
+          "story": "Let's stay with Eagle Crater for a moment. Opportunity looks closely at layered rock and tiny round grains that the team nicknames blueberries. The grains contain a mineral called hematite. Together with the rock layers and their chemistry, they help scientists tell an old story: water once shaped this ground. The rover has found evidence of water, not evidence of living things. Inspect the close-up, then look back into the crater in a panorama taken after the rover drove out.",
+          "fact": "The rover found evidence of ancient water. This does not mean it found life.",
+          "sources": ["nasa-berry-bowl", "nasa-water"]
+        },
+        {
+          "id": "endeavour",
+          "eyebrow": "04 / FARTHER THAN PLANNED",
+          "title": "A new crater on the horizon",
+          "dateLabel": "9 August 2011",
+          "dateUtc": "2011-08-09",
+          "scene": "mars",
+          "artifactIds": ["opportunity-rover"],
+          "ground": {"type": "photo", "path": "/assets/endeavour-full.jpg", "title": "At Spirit Point", "note": "Opportunity's Pancam mosaic after arriving at Endeavour's rim in August 2011. This is a directional view, not a 360° panorama.", "credit": "NASA / JPL-Caltech / Cornell / ASU · PIA14509", "source": "nasa-spirit-point", "cover": true},
+          "locationId": "endeavour-crater",
+          "image": {"path": "/assets/endeavour-full.jpg", "alt": "Opportunity's panorama on arrival at Endeavour Crater's rim", "credit": "NASA / JPL-Caltech / Cornell / ASU · PIA14509"},
+          "story": "Opportunity was designed for 90 Martian days, yet it keeps travelling for years. On 9 August 2011, it reaches the western rim of enormous Endeavour Crater at a place called Spirit Point. In the rover's photograph, you can look across the rim. On our globe, the marker is at Endeavour's official centre, because the arrival photograph does not give us a precise rover coordinate here. The map and the camera tell different, complementary parts of the story.",
+          "fact": "The marker on the globe shows Endeavour's official centre, not Opportunity's arrival point on its rim.",
+          "sources": ["nasa-spirit-point", "usgs-endeavour"]
+        },
+        {
+          "id": "last-signal",
+          "eyebrow": "05 / A QUIET VALLEY",
+          "title": "The last message home",
+          "dateLabel": "10 June 2018",
+          "dateUtc": "2018-06-10",
+          "scene": "map",
+          "artifactIds": ["opportunity-rover"],
+          "ground": {"type": "panorama", "path": "/assets/final-pan.jpg", "title": "Perseverance Valley", "note": "Opportunity's final 360° Pancam panorama, acquired 13 May–10 June 2018. Some frames remain black and white because imaging was unfinished.", "credit": "NASA / JPL-Caltech / Cornell / ASU · PIA22909", "vaov": 80.4, "source": "nasa-final-pan"},
+          "locationId": "perseverance-valley",
+          "image": {"path": "/assets/final-map.jpg", "alt": "NASA's final traverse map of Opportunity from Eagle Crater to Perseverance Valley", "credit": "NASA / JPL-Caltech / MSSS · PIA23178"},
+          "story": "Our map follows Opportunity to Perseverance Valley, on Endeavour's western rim. Here the rover photographs a full circle around itself. Then, in June 2018, a dust storm spreads across Mars. Sunlight fades, and Opportunity's solar panels cannot make enough power. Its last signal reaches Earth on 10 June. Look around its final panorama. The empty parts of some frames are real: the rover never finished sending every colour image.",
+          "fact": "Last contact is not the same as the date NASA declared the mission complete. The rover travelled 45.16 km in total.",
+          "sources": ["nasa-final-map", "nasa-opportunity"]
+        },
+        {
+          "id": "legacy",
+          "eyebrow": "06 / WHAT REMAINS",
+          "title": "A machine can leave a question answered",
+          "dateLabel": "13 February 2019",
+          "dateUtc": "2019-02-13",
+          "scene": "map",
+          "artifactIds": ["opportunity-rover", "opportunity-lander", "opportunity-heat-shield"],
+          "objectLabel": "Rover, platform & heat shield",
+          "ground": {"type": "panorama", "path": "/assets/final-pan.jpg", "title": "Perseverance Valley", "note": "Opportunity's final 360° Pancam panorama, acquired 13 May–10 June 2018. The rover's exact resting point is not claimed here.", "credit": "NASA / JPL-Caltech / Cornell / ASU · PIA22909", "vaov": 80.4, "source": "nasa-final-pan"},
+          "locationId": "perseverance-valley",
+          "image": {"path": "/assets/final-map.jpg", "alt": "NASA's final traverse map of Opportunity from Eagle Crater to Perseverance Valley", "credit": "NASA / JPL-Caltech / MSSS · PIA23178"},
+          "story": "For months, people on Earth keep listening for Opportunity. No new signal comes. On 13 February 2019, NASA ends the mission. The rover remains in Perseverance Valley. Far away, its landing platform remains in Eagle Crater, and other entry hardware lies where it fell. These machines were left on Mars, but their discoveries came home: this world once had places shaped by water. Which object would you choose to tell the next story?",
+          "fact": "Opportunity's status is inactive. The final area is backed by NASA imagery, but this edition does not invent a pinpoint coordinate for the rover.",
+          "sources": ["nasa-opportunity", "nasa-final-map"]
+        }
+      ],
+      "sources": {
+        "jpl-navigation": {"title": "JPL Mars Exploration Rover Navigation", "url": "https://descanso.jpl.nasa.gov/DPSummary/DESCANSO_MER_NAV_051215C_low.pdf", "role": "launch time and navigation context"},
+        "nasa-opportunity": {"title": "NASA Science: Opportunity", "url": "https://science.nasa.gov/mission/mer-opportunity/", "role": "mission chronology, landing coordinates, science, and final status"},
+        "jpl-arrival": {"title": "JPL: Rover Team Readies for Second Landing", "url": "https://www.jpl.nasa.gov/news/rover-team-readies-for-second-landing-while-trying-to-mend-spirit/", "role": "scheduled arrival time and local/UTC conversion check"},
+        "nasa-lander": {"title": "NASA: Rover's Landing Hardware at Eagle Crater", "url": "https://science.nasa.gov/resource/rovers-landing-hardware-at-eagle-crater-mars/", "role": "landing platform identification"},
+        "nasa-home": {"title": "NASA: Home and Back Again", "url": "https://science.nasa.gov/photojournal/home-and-back-again/", "role": "rover view of the landing platform"},
+        "nasa-berry-bowl": {"title": "NASA: Discovery Served Up in a Bowl", "url": "https://science.nasa.gov/resource/discovery-served-up-in-a-bowl/", "role": "hematite spherules and water evidence"},
+        "nasa-water": {"title": "NASA: Evidence of a Water-Soaked Past", "url": "https://science.nasa.gov/photojournal/evidence-of-a-water-soaked-past/", "role": "Eagle Crater rock observation"},
+        "nasa-spirit-point": {"title": "NASA: Arrival at Spirit Point", "url": "https://science.nasa.gov/photojournal/arrival-at-spirit-point-by-mars-rover-opportunity/", "role": "Endeavour arrival date and view"},
+        "usgs-endeavour": {"title": "USGS Gazetteer: Endeavour Crater", "url": "https://planetarynames.wr.usgs.gov/Feature/14501", "role": "official crater centre and name"},
+        "nasa-final-map": {"title": "NASA: Opportunity's Final Traverse Map", "url": "https://science.nasa.gov/photojournal/opportunitys-final-traverse-map/", "role": "NASA route and final area"},
+        "nasa-legacy-pan": {"title": "NASA: Opportunity Legacy Panorama", "url": "https://science.nasa.gov/resource/opportunity-legacy-pan/", "role": "Perseverance Valley location description"}
+        ,"nasa-first-pan": {"title": "NASA: As Far as Opportunity's Eye Can See", "url": "https://science.nasa.gov/resource/as-far-as-opportunitys-eye-can-see/", "role": "first 360-degree Eagle Crater panorama"}
+        ,"nasa-final-pan": {"title": "NASA: Opportunity Legacy Pan (True Color)", "url": "https://science.nasa.gov/photojournal/opportunity-legacy-pan-true-color/", "role": "last 360-degree Perseverance Valley panorama"}
+        ,"nasa-lion-pan": {"title": "NASA: Opportunity Captures Lion King Panorama", "url": "https://science.nasa.gov/photojournal/opportunity-captures-lion-king-panorama/", "role": "360-degree view looking back into Eagle Crater"}
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "note": "Supplementary, source-linked presentation media. This file does not define spacecraft trajectories, rover coordinates, or new event times.",
+  "missions": {
+    "mer-b-opportunity": {
+      "mediaByPhase": {
+        "launch": {
+          "path": "/assets/opportunity-launch.jpg",
+          "alt": "Delta II Heavy rocket carrying Opportunity lifts off from Cape Canaveral at night",
+          "credit": "NASA/JPL-Caltech",
+          "sourceUrl": "https://science.nasa.gov/resource/opportunity-rover-delta-ii-launch/",
+          "caption": "The real Opportunity launch, 8 July 2003 UTC. The Earth-to-Mars line in the atlas is sampled from the archived MER1 SPICE cruise kernel."
+        },
+        "landing": {
+          "path": "/assets/landing-close.jpg",
+          "alt": "Opportunity looks back at its empty landing platform and wheel tracks on Mars",
+          "credit": "NASA/JPL-Caltech · PIA05575",
+          "sourceUrl": "https://science.nasa.gov/photojournal/home-and-back-again/",
+          "caption": "The landing platform remained in Eagle Crater after the rover drove away."
+        },
+        "water": {
+          "path": "/assets/water.jpg",
+          "alt": "Close view of the Berry Bowl rock and its round hematite grains",
+          "credit": "NASA/JPL-Caltech/Cornell · PIA05634",
+          "sourceUrl": "https://science.nasa.gov/resource/discovery-served-up-in-a-bowl/",
+          "caption": "Round hematite-rich grains became one clue to ancient water."
+        },
+        "endeavour": {
+          "path": "/assets/endeavour-full.jpg",
+          "alt": "Opportunity camera view after reaching Endeavour Crater's western rim",
+          "credit": "NASA/JPL-Caltech/Cornell/ASU · PIA14509",
+          "sourceUrl": "https://science.nasa.gov/photojournal/arrival-at-spirit-point-by-mars-rover-opportunity/",
+          "caption": "A rover-camera view from Spirit Point, on Endeavour's rim, August 2011."
+        },
+        "last-signal": {
+          "path": "/assets/final-pan.jpg",
+          "alt": "Opportunity's final panoramic view from Perseverance Valley",
+          "credit": "NASA/JPL-Caltech/Cornell/ASU · PIA22909",
+          "sourceUrl": "https://science.nasa.gov/photojournal/opportunity-legacy-pan-true-color/",
+          "caption": "The final panorama was acquired between 13 May and 10 June 2018."
+        },
+        "legacy": {
+          "path": "/assets/final-map.jpg",
+          "alt": "NASA annotated map of Opportunity's full traverse from Eagle Crater to Perseverance Valley",
+          "credit": "NASA/JPL-Caltech/MSSS · PIA23178",
+          "sourceUrl": "https://science.nasa.gov/photojournal/opportunitys-final-traverse-map/",
+          "caption": "NASA's published annotated traverse map, shown as an image rather than a reconstructed track."
+        }
+      },
+      "route": {
+        "path": "/assets/final-map.jpg",
+        "kind": "annotated NASA raster map",
+        "sourceUrl": "https://science.nasa.gov/photojournal/opportunitys-final-traverse-map/",
+        "credit": "NASA/JPL-Caltech/MSSS · PIA23178",
+        "description": "The published image records Opportunity's overall traverse. This edition does not convert the drawn line into a coordinate-registered rover path or claim that the marker moves along it at the correct time."
+      },
+      "highlights": [
+        {
+          "title": "A tiny crater with a big clue",
+          "summary": "Opportunity landed inside Eagle Crater and found layered rocks and hematite-rich spheres that helped scientists infer past water.",
+          "image": {"path": "/assets/water.jpg", "alt": "Berry Bowl rock with round grains photographed by Opportunity", "credit": "NASA/JPL-Caltech/Cornell · PIA05634"},
+          "sourceUrl": "https://science.nasa.gov/resource/discovery-served-up-in-a-bowl/"
+        },
+        {
+          "title": "A journey far beyond 90 sols",
+          "summary": "The rover reached the western rim of Endeavour Crater on 9 August 2011, years after its planned three-month mission.",
+          "image": {"path": "/assets/endeavour-full.jpg", "alt": "Opportunity view from Spirit Point at Endeavour Crater", "credit": "NASA/JPL-Caltech/Cornell/ASU · PIA14509"},
+          "sourceUrl": "https://science.nasa.gov/photojournal/arrival-at-spirit-point-by-mars-rover-opportunity/"
+        },
+        {
+          "title": "The last view",
+          "summary": "Opportunity's final panorama looked across Perseverance Valley. Its last communication came on 10 June 2018 after a planet-wide dust storm reduced sunlight.",
+          "image": {"path": "/assets/final-pan.jpg", "alt": "Final Opportunity panorama from Perseverance Valley", "credit": "NASA/JPL-Caltech/Cornell/ASU · PIA22909"},
+          "sourceUrl": "https://science.nasa.gov/photojournal/opportunity-legacy-pan-true-color/"
+        }
+      ]
+    },
+    "apollo-11": {
+      "mediaByPhase": {
+        "launch": {
+          "path": "/assets/apollo11-launch.jpg",
+          "alt": "Apollo 11 Saturn V rocket lifting off from Kennedy Space Center",
+          "credit": "NASA",
+          "sourceUrl": "https://www.nasa.gov/image-article/apollo-11-lifts-off/",
+          "caption": "Apollo 11 launched on 16 July 1969. This is a historical photograph, not a rendered trajectory."
+        }
+      },
+      "highlights": [
+        {
+          "title": "The first human landing",
+          "summary": "Apollo 11's Eagle lander reached Mare Tranquillitatis. Its descent stage and laser ranging retroreflector remained on the lunar surface.",
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo11info.html"
+        }
+      ]
+    },
+    "viking-1": {
+      "mediaByPhase": {
+        "landing": {
+          "path": "/assets/viking-first-panorama.jpg",
+          "alt": "First panoramic view by Viking 1 from the surface of Mars",
+          "credit": "NASA/JPL · PIA00383",
+          "sourceUrl": "https://science.nasa.gov/photojournal/first-panoramic-view-from-the-surface-of-mars-2/",
+          "caption": "Viking 1's camera looked over Chryse Planitia after landing in July 1976."
+        }
+      },
+      "highlights": [
+        {
+          "title": "A first look from Mars",
+          "summary": "Viking 1 touched down in Chryse Planitia on 20 July 1976 and returned images from the surface. Its biology experiments found no definitive evidence of life.",
+          "image": {"path": "/assets/viking-first-panorama.jpg", "alt": "Viking 1 surface panorama", "credit": "NASA/JPL · PIA00383"},
+          "sourceUrl": "https://nssdc.gsfc.nasa.gov/planetary/viking.html"
+        }
+      ]
+    }
+  }
+}

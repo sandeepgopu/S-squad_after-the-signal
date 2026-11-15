@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>if(location.protocol==='file:')location.replace('http://127.0.0.1:8765/explore.html'+location.search+location.hash)</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1119">
+  <title>Explore · After the Signal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cesium@1.134.1/Build/Cesium/Widgets/widgets.css">
+  <link rel="stylesheet" href="/explore.css?v=1">
+  <script>window.CESIUM_BASE_URL='https://cdn.jsdelivr.net/npm/cesium@1.134.1/Build/Cesium/'</script>
+  <script src="https://cdn.jsdelivr.net/npm/cesium@1.134.1/Build/Cesium/Cesium.js" defer></script>
+  <script type="module" src="/explore.js?v=1"></script>
+</head>
+<body class="mode-solar">
+  <header class="topbar"><a class="brand" href="/"><span class="star">✦</span><span>AFTER THE SIGNAL<small>MISSION EXPLORER</small></span></a><span class="topnote">A FIELD GUIDE TO PLACES WE LEFT BEHIND</span><a class="legacy" href="/atlas-method.html">Data & accuracy ↗</a></header>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Worlds and missions">
+      <div class="sidehead"><span class="eyebrow">EXPLORE THE ATLAS</span><h1>Choose a world.</h1><p>Discover the spacecraft and stories left on another world.</p></div>
+      <div id="worlds" class="worlds"><button type="button" data-world="mars"><span class="world-disc mars-disc"></span><span><strong>Mars</strong><small id="marsCount">Loading sites…</small></span><b>→</b></button><button type="button" data-world="moon"><span class="world-disc moon-disc"></span><span><strong>Moon</strong><small id="moonCount">Loading sites…</small></span><b>→</b></button></div>
+      <div class="listhead"><span class="eyebrow" id="listTitle">MISSIONS & OBJECTS</span><button type="button" id="showAll">Show all</button></div>
+      <div id="missionList" class="mission-list"></div>
+      <div class="sidefoot"><span class="status-dot"></span><span>A curated, growing set of published locations. Labels with stories are marked <b>STORY</b>.</span></div>
+    </aside>
+    <main class="main">
+      <div class="stage-head"><div><span class="eyebrow" id="stageEyebrow">01 / SOLAR SYSTEM</span><h2 id="stageTitle">Every journey starts here.</h2><p id="stageSubtitle">Explore the solar system, then choose Mars or the Moon.</p></div><div class="stage-actions"><button type="button" id="solarButton">← Solar system</button><button type="button" id="allPlanetsButton">Zoom out</button><button type="button" id="globeButton" hidden>← World globe</button><button type="button" id="routeButton" hidden>NASA route map</button></div></div>
+      <div id="solarTime" class="solar-time"><button id="playSolar" type="button">▶ Play</button><input id="solarSlider" type="range" min="0" max="1000" value="0" aria-label="Solar system time"><strong id="solarDate">2003-07-08</strong><span>ECLIPTIC GRID · INCLINED 3D ORBITS</span></div>
+      <div id="stage" class="stage"><div id="solarScene" class="scene"></div><div id="globeScene" class="scene" hidden></div><div id="routeScene" class="route-scene" hidden><img id="routeImage" alt=""><div id="routeCaption"></div></div><div id="loading" class="loading">Loading NASA mission positions…</div><div id="stageHint" class="stage-hint">Drag to orbit · scroll to zoom · select Mars or Moon</div></div>
+      <div class="stage-footer"><div><span class="eyebrow">POSITION & VIEW</span><strong id="positionText">NASA/JPL SPICE · Sun-centered ECLIPJ2000</strong></div><div id="precisionText">Planet symbols are enlarged for visibility. Positions and orbital planes use source data.</div></div>
+    </main>
+    <aside class="story" aria-label="Mission story and imagery"><div class="story-scroll"><span class="eyebrow" id="storyEyebrow">MISSION STORY</span><h2 id="storyTitle">Pick a world to begin.</h2><p id="storyIntro">Tap Mars or the Moon. Their known objects will appear on the globe; choose a pin or a mission from the list.</p><div id="storyContent"></div></div></aside>
+  </div>
+  <footer class="timeline"><div class="timeline-label"><span class="eyebrow">FOLLOW THE JOURNEY</span><strong id="timelineName">Choose a mission</strong></div><div id="timelineSteps" class="timeline-steps"></div><div class="timeline-controls"><button id="previousStep" type="button" aria-label="Previous phase" disabled>←</button><button id="nextStep" type="button" aria-label="Next phase" disabled>→</button></div></footer>
+</body>
+</html>

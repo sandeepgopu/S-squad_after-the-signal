@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "spatialContract": {
+    "trajectory": "Sun-origin ECLIPJ2000 Cartesian kilometres sampled from NAIF SPICE SPK; event time labels UTC converted by NAIF LSK to ET/TDB",
+    "marsSurface": "IAU Mars planetocentric latitude, positive-east longitude, degrees; surface heights not asserted",
+    "moonSurface": "Mean Earth/Polar Axis, DE421, planetocentric latitude and positive-east longitude, degrees; NASA LRO image-derived locations",
+    "note": "Surface longitude/latitude is body-fixed. It must not be treated as ECLIPJ2000 or drawn at a heliocentric position without a time-dependent PCK frame transform."
+  },
+  "missions": [
+    {
+      "id":"apollo-11","name":"Apollo 11","body":"moon","color":"#c9d8eb","startUtc":"1969-07-16T13:32:00Z","endUtc":"1969-07-24T16:50:35Z","ephemerisStepHours":6,
+      "summary":"Humans reach the Sea of Tranquility. The descent stage and laser reflector remain on the Moon.",
+      "trajectoryStatus":"No spacecraft orbit line is shown until its flight vectors are ingested and validated. Planet and Moon positions come from SPICE.",
+      "events":[
+        {"id":"launch","utc":"1969-07-16T13:32:00Z","title":"Launch from Earth","kind":"event","source":"https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo11info.html"},
+        {"id":"landing","utc":"1969-07-20T20:17:39Z","title":"Eagle lands","kind":"surface","body":"moon","site":"Mare Tranquillitatis · Sea of Tranquility","lat":0.67416,"lonEast":23.47314,"positionType":"published landing-site coordinate","source":"https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html"},
+        {"id":"return","utc":"1969-07-24T16:50:35Z","title":"Crew returns to Earth","kind":"event","source":"https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo11info.html"}
+      ],
+      "objects":[
+        {"name":"Lunar Module descent stage","eventId":"landing","state":"On lunar surface"},
+        {"name":"Laser ranging retroreflector","eventId":"landing","state":"On lunar surface","lat":0.67345,"lonEast":23.47307,"source":"https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html"}
+      ]
+    },
+    {
+      "id":"viking-1","name":"Viking 1","body":"mars","color":"#ed9f78","startUtc":"1975-08-20T00:00:00Z","endUtc":"1976-07-20T11:53:06Z","ephemerisStepHours":24,"orbitSpk":{"url":"https://naif.jpl.nasa.gov/pub/naif/VIKING/kernels/spk/vo1_rcon.bsp","naifId":-27,"centerId":4,"frame":"J2000","startUtc":"1976-06-22T00:00:00Z","endUtc":"1976-07-20T00:00:00Z","stepMinutes":60},
+      "summary":"An orbiter surveys Mars; its lander settles on the western slopes of Chryse Planitia.",
+      "trajectoryStatus":"Viking 1 Orbiter's path comes from the NAIF reconstructed orbit SPK relative to the Mars-system barycenter. Cruise vectors are not yet ingested, so no Earth-to-Mars spacecraft arc is drawn.",
+      "events":[
+        {"id":"launch","utc":"1975-08-20T00:00:00Z","timePrecision":"day","title":"Launch from Earth","kind":"event","source":"https://science.nasa.gov/mission/viking-1/"},
+        {"id":"orbit","utc":"1976-06-19T00:00:00Z","timePrecision":"day","title":"Orbiter enters Mars orbit","kind":"orbit-event","body":"mars","source":"https://science.nasa.gov/mission/viking-1/"},
+        {"id":"landing","utc":"1976-07-20T11:53:06Z","title":"Lander touches Mars","kind":"surface","body":"mars","site":"Chryse Planitia","lat":22.27,"lonEast":312.05,"positionType":"published planetocentric site, approximate to 0.01°","source":"https://nssdc.gsfc.nasa.gov/planetary/viking.html"}
+      ],
+      "objects":[{"name":"Viking Lander 1","eventId":"landing","state":"On Martian surface"},{"name":"Viking Orbiter 1","eventId":"orbit","state":"Historical Mars orbiter; no current orbit asserted"}]
+    },
+    {
+      "id":"mer-b-opportunity","name":"Opportunity","body":"mars","color":"#e6b989","startUtc":"2003-07-08T03:18:15Z","endUtc":"2004-01-25T00:00:00Z","ephemerisStepHours":12,"spacecraftSpk":{"url":"https://naif.jpl.nasa.gov/pub/naif/pds/data/mer1-m-spice-6-v1.0/mer1sp_1000/data/spk/mer1_cruise.bsp","naifId":-253},
+      "summary":"A small rover crosses interplanetary space, lands in Eagle Crater, and begins a fourteen-year journey.",
+      "trajectoryStatus":"Cruise line comes from the archived MER1 SPICE spacecraft SPK. It stops at the last covered sample; it does not extrapolate into entry or surface travel.",
+      "storyPath":"/story.html#mer-b-opportunity/launch","ridePath":"/ride.html",
+      "events":[
+        {"id":"launch","utc":"2003-07-08T03:18:15Z","title":"Launch from Earth","kind":"event","source":"https://descanso.jpl.nasa.gov/DPSummary/DESCANSO_MER_NAV_051215C_low.pdf"},
+        {"id":"landing","utc":"2004-01-25T00:00:00Z","timePrecision":"day","title":"Opportunity lands in Eagle Crater","kind":"surface","body":"mars","site":"Eagle Crater · Meridiani Planum","lat":-1.9483,"lonEast":354.47417,"positionType":"NASA published landing coordinate","source":"https://science.nasa.gov/mission/mer-opportunity/"}
+      ],
+      "objects":[{"name":"Opportunity rover","eventId":"landing","state":"Final known area: Perseverance Valley; no exact final point asserted"},{"name":"Landing platform","eventId":"landing","state":"At Eagle Crater"}]
+    }
+  ]
+}

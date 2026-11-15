@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>if(location.protocol==='file:')location.replace('http://127.0.0.1:8765/'+location.search+location.hash)</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1119">
+  <title>Explore · After the Signal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cesium@1.134.1/Build/Cesium/Widgets/widgets.css">
+  <link rel="stylesheet" href="/explore.css?v=1">
+  <script>window.CESIUM_BASE_URL='https://cdn.jsdelivr.net/npm/cesium@1.134.1/Build/Cesium/'</script>
+  <script src="https://cdn.jsdelivr.net/npm/cesium@1.134.1/Build/Cesium/Cesium.js" defer></script>
+  <script type="module" src="/explore.js?v=1"></script>
+  <style>
+  .world-gateway{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 35%,#263848 0,#101820 55%,#090e14 100%);padding:24px;box-sizing:border-box}.world-gateway[hidden]{display:none}.world-gateway-inner{width:min(980px,100%);text-align:center}.world-gateway h1{font:600 clamp(32px,5vw,58px)/1.05 'Space Grotesk',system-ui;color:#f6f0e8;margin:10px 0}.world-gateway p{color:#bdc8cd;margin:12px 0 32px}.world-gateway .world-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,4vw,42px)}.gateway-world{border:1px solid #ffffff32;border-radius:24px;background:linear-gradient(145deg,#172732,#10171d);color:white;padding:24px 12px 22px;display:grid;justify-items:center;gap:12px;cursor:pointer;transition:transform .2s,border-color .2s}.gateway-world:hover,.gateway-world:focus-visible{transform:translateY(-4px);border-color:#f2b98b;outline:none}.gateway-world strong{font:600 25px 'Space Grotesk',system-ui}.gateway-world small{color:#c2cbd0}.gateway-sphere{width:clamp(150px,25vw,260px);aspect-ratio:1;border-radius:50%;box-shadow:inset -24px -20px 38px #0009, inset 10px 10px 24px #ffffff40,0 22px 46px #0008;position:relative;overflow:hidden}.gateway-sphere:after{content:'';position:absolute;inset:0;border-radius:50%;background:linear-gradient(110deg,transparent 45%,#070b10a8 92%)}.gateway-mars{background:radial-gradient(ellipse at 30% 34%,#e5b18a 0 7%,transparent 8%),radial-gradient(ellipse at 62% 62%,#653d33 0 13%,transparent 14%),radial-gradient(ellipse at 45% 47%,#b66e4d 0,#a25139 55%,#723d35 100%)}.gateway-moon{background:radial-gradient(circle at 35% 28%,#727982 0 5%,transparent 5.5%),radial-gradient(circle at 66% 38%,#626970 0 10%,transparent 10.5%),radial-gradient(circle at 44% 68%,#6c737a 0 13%,transparent 13.5%),radial-gradient(circle at 63% 72%,#686e75 0 4%,transparent 4.5%),radial-gradient(circle at 38% 38%,#dadde0,#aab0b7 62%,#858b92)}.gateway-secondary{margin-top:28px;color:#c3d0d3;background:none;border:1px solid #ffffff45;border-radius:99px;padding:11px 18px;cursor:pointer}.gateway-secondary:hover{border-color:#fff;color:#fff}@media(max-width:520px){.world-gateway .world-cards{gap:12px}.gateway-world{padding:18px 7px;border-radius:18px}.gateway-sphere{width:min(37vw,175px)}.gateway-world strong{font-size:21px}}
+  .gateway-mars{background:#090d12 url('/assets/gateway-mars.jpg') center / 122% 122% no-repeat}
+  .gateway-moon{background:#090d12 url('/assets/gateway-moon.jpg') center / 103% 103% no-repeat}
+  .gateway-sphere:after{background:linear-gradient(105deg,transparent 62%,#080d1499 100%)}
+  .gateway-credit{font-size:11px;color:#8fa0a8;margin-top:12px}
+  </style>
+</head>
+<body class="mode-solar">
+  <section class="world-gateway" id="worldGateway" aria-labelledby="gatewayTitle"><div class="world-gateway-inner"><span class="eyebrow">AFTER THE SIGNAL · MISSION ATLAS</span><h1 id="gatewayTitle">Choose your world</h1><p>Visit the Moon or Mars to discover real missions and the objects left behind.</p><div class="world-cards"><button class="gateway-world" data-enter-world="mars" type="button"><span class="gateway-sphere gateway-mars" aria-hidden="true"></span><strong>Mars</strong><small>Explore the red planet</small></button><button class="gateway-world" data-enter-world="moon" type="button"><span class="gateway-sphere gateway-moon" aria-hidden="true"></span><strong>Moon</strong><small>Explore our nearest world</small></button></div><button class="gateway-secondary" id="gatewaySolar" type="button">Explore the solar system instead</button><div class="gateway-credit">Mars: NASA/JPL-Caltech/USGS Viking mosaic · Moon: NASA SVS / LRO mosaic</div></div></section>
+  <header class="topbar"><a class="brand" href="/"><span class="star">✦</span><span>AFTER THE SIGNAL<small>MISSION EXPLORER</small></span></a><span class="topnote">A FIELD GUIDE TO PLACES WE LEFT BEHIND</span><a class="legacy" href="/atlas-method.html">Data & accuracy ↗</a></header>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Worlds and missions">
+      <div class="sidehead"><span class="eyebrow">EXPLORE THE ATLAS</span><h1>Choose a world.</h1><p>Discover the spacecraft and stories left on another world.</p></div>
+      <div id="worlds" class="worlds"><button type="button" data-world="mars"><span class="world-disc mars-disc"></span><span><strong>Mars</strong><small id="marsCount">Loading sites…</small></span><b>→</b></button><button type="button" data-world="moon"><span class="world-disc moon-disc"></span><span><strong>Moon</strong><small id="moonCount">Loading sites…</small></span><b>→</b></button></div>
+      <div class="listhead"><span class="eyebrow" id="listTitle">MISSIONS & OBJECTS</span><button type="button" id="showAll">Show all</button></div>
+      <div id="missionList" class="mission-list"></div>
+      <div class="sidefoot"><span class="status-dot"></span><span>A curated, growing set of published locations. Labels with stories are marked <b>STORY</b>.</span></div>
+    </aside>
+    <main class="main">
+      <div class="stage-head"><div><span class="eyebrow" id="stageEyebrow">01 / SOLAR SYSTEM</span><h2 id="stageTitle">Every journey starts here.</h2><p id="stageSubtitle">Explore the solar system, then choose Mars or the Moon.</p></div><div class="stage-actions"><button type="button" id="solarButton">← Solar system</button><button type="button" id="allPlanetsButton">Zoom out</button><button type="button" id="globeButton" hidden>← World globe</button><button type="button" id="routeButton" hidden>NASA route map</button></div></div>
+      <div id="solarTime" class="solar-time"><button id="playSolar" type="button">▶ Play</button><input id="solarSlider" type="range" min="0" max="1000" value="0" aria-label="Solar system time"><strong id="solarDate">2003-07-08</strong><span>ECLIPTIC GRID · INCLINED 3D ORBITS</span></div>
+      <div id="stage" class="stage"><div id="solarScene" class="scene"></div><div id="globeScene" class="scene" hidden></div><div id="routeScene" class="route-scene" hidden><img id="routeImage" alt=""><div id="routeCaption"></div></div><div id="loading" class="loading">Loading NASA mission positions…</div><div id="stageHint" class="stage-hint">Drag to orbit · scroll to zoom · select Mars or Moon</div></div>
+      <div class="stage-footer"><div><span class="eyebrow">POSITION & VIEW</span><strong id="positionText">NASA/JPL SPICE · Sun-centered ECLIPJ2000</strong></div><div id="precisionText">Planet symbols are enlarged for visibility. Positions and orbital planes use source data.</div></div>
+    </main>
+    <aside class="story" aria-label="Mission story and imagery"><div class="story-scroll"><span class="eyebrow" id="storyEyebrow">MISSION STORY</span><h2 id="storyTitle">Pick a world to begin.</h2><p id="storyIntro">Tap Mars or the Moon. Their known objects will appear on the globe; choose a pin or a mission from the list.</p><div id="storyContent"></div></div></aside>
+  </div>
+  <footer class="timeline"><div class="timeline-label"><span class="eyebrow">FOLLOW THE JOURNEY</span><strong id="timelineName">Choose a mission</strong></div><div id="timelineSteps" class="timeline-steps"></div><div class="timeline-controls"><button id="previousStep" type="button" aria-label="Previous phase" disabled>←</button><button id="nextStep" type="button" aria-label="Next phase" disabled>→</button></div></footer>
+</body>
+</html>

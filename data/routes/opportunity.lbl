@@ -1,0 +1,135 @@
+PDS_VERSION_ID                   = PDS3
+
+/* FILE DATA ELEMENTS */
+
+RECORD_TYPE                      = STREAM
+FILE_RECORDS                     = 21105
+^HEADER                          = ("MERB_TRAVERSE.CSV", 1)
+^SPREADSHEET                     = ("MERB_TRAVERSE.CSV", 73 <BYTES>)
+
+/* IDENTIFICATION DATA ELEMENTS */
+
+DATA_SET_ID                      = "N/A" /* This product is not archived in PDS. */
+PRODUCT_ID                       = "MERB_Traverse" 
+INSTRUMENT_HOST_ID               = "MER1"
+INSTRUMENT_HOST_NAME             = "MARS EXPLORATION ROVER 1"
+MISSION_NAME                     = "MARS EXPLORATION ROVER"
+PRODUCER_FULL_NAME               = "JUNE WANG"
+PRODUCER_INSTITUTION_NAME        = "WASHINGTON UNIVERSITY"
+PRODUCT_CREATION_TIME            = 2018-12-28T00:00:00  
+NOTE                             = "File has data from sols 1 through 5130."
+TARGET_NAME                      = "MARS"
+
+OBJECT                           = HEADER
+  BYTES                          = 72
+  RECORDS                        = 1
+  HEADER_TYPE                    = SPREADSHEET
+  INTERCHANGE_FORMAT             = ASCII
+  DESCRIPTION                    = "The first record in the file contains a
+                                    list of the column headings for the data
+                                    in the following records. This header 
+                                    record is comma-delimited."
+END_OBJECT                       = HEADER
+
+OBJECT                           = SPREADSHEET
+  ROWS                           = 21104
+  FIELDS                         = 9
+  ROW_BYTES                      = 90
+  FIELD_DELIMITER                = "COMMA"
+  DESCRIPTION                    = "This spreadsheet contains the PDS 
+    interpolated rover traverse data. The first record in the file gives 
+    the names of the fields in the following records. The remainder of the 
+    file consists of one record for each rover drive. Records are 
+    variable-length and fields are comma-delimited."
+  
+  OBJECT                         = FIELD
+    NAME                         = "SITE"
+    FIELD_NUMBER                 = 1
+    DATA_TYPE                    = CHARACTER
+    BYTES                        = 10
+    DESCRIPTION                  = "Site is a major coordinate frame from 
+                                    which all rover activities in a local 
+                                    region are referenced. Valid values: 
+                                    00, 01, 02,...,99, A0, A1,...,A9, AA, 
+                                    AB, etc. All the letters are 
+                                    converted to numbers according to SIS."
+  END_OBJECT                     = FIELD
+
+  OBJECT                         = FIELD
+    NAME                         = "DRIVE"
+    FIELD_NUMBER                 = 2
+    DATA_TYPE                    = CHARACTER
+    BYTES                        = 10
+    DESCRIPTION                  = "Drive is rover's position within a 
+                                    site. Valid values: 00, 01, 02,...,
+                                    99, A0, A1,...,A9, AA, AB, etc. All
+                                    the letters are converted to numbers 
+                                    according to SIS."
+  END_OBJECT                     = FIELD
+
+  OBJECT                         = FIELD
+    NAME                         = "START_SOL"
+    FIELD_NUMBER                 = 3
+    DATA_TYPE                    = ASCII_INTEGER
+    BYTES                        = 10
+    DESCRIPTION                  = "A particular sol when the rover 
+                                    starts to move to a new position 
+                                    in a site."
+  END_OBJECT                     = FIELD
+
+  OBJECT                         = FIELD
+    NAME                         = "END_SOL"
+    FIELD_NUMBER                 = 4
+    DATA_TYPE                    = ASCII_INTEGER
+    BYTES                        = 10
+    DESCRIPTION                  = "A particular sol when the rover 
+                                    arrives at a new position in a 
+                                    site and before it moves to the 
+                                    next position."
+  END_OBJECT                     = FIELD
+
+  OBJECT                         = FIELD
+    NAME                         = "RAW_X"
+    FIELD_NUMBER                 = 5
+    DATA_TYPE                    = ASCII_REAL
+    BYTES                        = 10
+    DESCRIPTION                  = "Uncorrected rover x position from 
+                                    the telemetry."
+  END_OBJECT                     = FIELD
+
+  OBJECT                         = FIELD
+    NAME                         = "RAW_Y"
+    FIELD_NUMBER                 = 6
+    DATA_TYPE                    = ASCII_REAL
+    BYTES                        = 10
+    DESCRIPTION                  = "Uncorrected rover y position from 
+                                    the telemetry."
+  END_OBJECT                     = FIELD
+
+  OBJECT                         = FIELD
+    NAME                         = "RAW_Z"
+    FIELD_NUMBER                 = 7
+    DATA_TYPE                    = ASCII_REAL
+    BYTES                        = 10
+    DESCRIPTION                  = "Uncorrected rover z position from 
+                                    the telemetry."
+  END_OBJECT                     = FIELD
+
+  OBJECT                         = FIELD
+    NAME                         = "CORRECTED_X"
+    FIELD_NUMBER                 = 8
+    DATA_TYPE                    = ASCII_REAL
+    BYTES                        = 10
+    DESCRIPTION                  = "Corrected x position."
+  END_OBJECT                     = FIELD
+
+  OBJECT                         = FIELD
+    NAME                         = "CORRECTED_Y"
+    FIELD_NUMBER                 = 9
+    DATA_TYPE                    = ASCII_REAL
+    BYTES                        = 10
+    DESCRIPTION                  = "Corrected y position."
+  END_OBJECT                     = FIELD    
+
+END_OBJECT                       = SPREADSHEET
+END 

@@ -1,0 +1,9 @@
+{
+  "name": "mars-story-atlas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node --check server.mjs && node --check experience-nav.js && node --check explore.js && node --check journey.js && node --check app.js && node --check ride.js && node --check atlas.js && node --check surface.js && node --check orbit.js && node scripts/verify.mjs && node scripts/verify_atlas.mjs && node scripts/verify_objects.mjs && node scripts/verify_sequences.mjs && node scripts/verify_journey.mjs"
+  }
+}

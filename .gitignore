@@ -1,0 +1,12 @@
+# Regenerable / downloaded data (see README "Setup")
+cache/
+kernels/
+ride/raw/
+ride/edrindex.tab
+assets/PIA22909_full.tif
+server.log
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store

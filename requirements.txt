@@ -1,0 +1,4 @@
+# Only needed to rebuild data (scripts/*.py); the web server itself has no dependencies.
+Pillow
+spiceypy
+imageio-ffmpeg

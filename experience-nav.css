@@ -1,0 +1,8 @@
+.experience-nav{position:fixed;right:20px;bottom:20px;z-index:100000;font:600 14px/1.3 system-ui,sans-serif;color:#f8f2ea}
+.experience-nav-button{cursor:pointer;border:1px solid #f1bb92;border-radius:999px;padding:13px 19px;background:#edb58b;color:#19212b;font:inherit;box-shadow:0 8px 28px #0008}
+.experience-nav-button:hover,.experience-nav-button:focus-visible{background:#ffd1ae;outline:2px solid #fff;outline-offset:2px}
+.experience-nav-list{position:absolute;right:0;bottom:calc(100% + 10px);width:min(290px,calc(100vw - 40px));max-height:min(70vh,490px);overflow:auto;box-sizing:border-box;padding:8px;border:1px solid #566677;border-radius:16px;background:#17212c;box-shadow:0 16px 40px #000a}
+.experience-nav-list[hidden]{display:none}
+.experience-nav-list a{display:block;padding:12px 14px;border-radius:9px;color:#f8f2ea;text-decoration:none;font:600 14px/1.3 system-ui,sans-serif}
+.experience-nav-list a:hover,.experience-nav-list a:focus-visible,.experience-nav-list a[aria-current=page]{background:#334454;color:#ffd1ae;outline:none}
+@media(max-width:700px){.experience-nav{right:12px;bottom:12px}.experience-nav-button{padding:11px 14px}}
