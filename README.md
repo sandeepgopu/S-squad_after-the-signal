@@ -7,8 +7,8 @@ An interactive, sourced web story built for NASA Space Apps Challenge 2026, *Aba
 Requirements: **Node.js 18 or newer** and an internet connection. No `npm install`, no build step, no database.
 
 ```
-git clone https://github.com/sandeepgopu/s-squared-after-the-signal.git
-cd s-squared-after-the-signal
+git clone https://github.com/sandeepgopu/S-squad_after-the-signal.git
+cd S-squad_after-the-signal
 node server.mjs
 ```
 
